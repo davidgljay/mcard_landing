@@ -123,6 +123,8 @@ textarea:focus-visible,
 .btn--accent:hover { background: #9bc478; color: var(--navy); }
 .btn--outline { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
 .btn--outline.btn--dark { color: var(--green-200); border-color: var(--green-200); }
+.btn--white { background: #ffffff; color: #000000; border: 1.5px solid #ffffff; }
+.btn--white:hover { background: #f0efe6; color: #000000; }
 .btn--disabled {
   position: relative;
   background: #3a4a52;
@@ -259,19 +261,26 @@ textarea:focus-visible,
   left: calc(var(--left) * 1%);
   width: 58%;
   aspect-ratio: 264 / 174;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 18px 34px rgba(0,0,0,.35);
-  transform: rotate(var(--rot));
+  z-index: var(--z, 1);
+  transform: rotate(var(--rot)) scale(var(--scale, 1));
   transition: top .5s cubic-bezier(.2,.8,.2,1), left .5s cubic-bezier(.2,.8,.2,1), transform .5s cubic-bezier(.2,.8,.2,1);
   cursor: grab;
   touch-action: none;
-  background: var(--navy);
 }
 .card-stack__card.is-dragging {
   cursor: grabbing;
   transition: none;
   z-index: 50;
+}
+.card-stack__card-inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 34px rgba(0,0,0,.35);
+  background: var(--navy);
 }
 .card-stack__card img {
   position: absolute;
