@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#63ae22;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+a{color:#63ae22}
+a:hover{color:#1c330f}
+.dv-turn *{box-sizing:border-box}
+.w{background:#FBFAF7;color:#2C2C2A;font-family:system-ui,sans-serif}
+.b{border:1.5px dashed #888780;border-radius:3px}
+.sec{padding:22px 26px;border-bottom:1.5px dashed #cfccc2}
+.ph{background:#D3D1C7;border-radius:2px;height:7px}
+.ph.d{background:#B4B2A9}
+.hand{font-family:'Playpen Sans',cursive;color:#5F5E5A}
+.note{font-family:'Playpen Sans',cursive;font-size:15px;color:#63ae22;transform:rotate(-1.2deg)}
+.h1{font-family:'Playpen Sans',cursive;font-size:31px;line-height:1.05;color:#2C2C2A;font-weight:700}
+.h2{font-family:'Playpen Sans',cursive;font-size:20px;color:#2C2C2A;font-weight:700}
+.h3{font:600 11px/1.3 system-ui,sans-serif;letter-spacing:.02em}
+.t{font:400 10.5px/1.5 system-ui,sans-serif;color:#5F5E5A}
+.eyebrow{font:600 8.5px/1 system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#888780}
+.btn{font:600 10px system-ui,sans-serif;padding:8px 13px;border-radius:4px;background:#63ae22;color:#fff;display:inline-block}
+.btn.o{background:transparent;color:#63ae22;border:1.5px solid #63ae22}
+.img{border:1.5px dashed #888780;background:repeating-linear-gradient(135deg,#EDEBE4 0 6px,#F7F6F1 6px 12px);display:flex;align-items:center;justify-content:center;font-family:'Playpen Sans',cursive;font-size:13px;color:#888780;border-radius:3px}
+.crd{background:#1c330f;border-radius:7px;color:#aed38e;padding:11px 12px;display:flex;flex-direction:column;justify-content:space-between;font:600 9px system-ui,sans-serif}
+.chip{border:1.2px dashed #888780;border-radius:20px;padding:5px 10px;font:400 9.5px system-ui,sans-serif;color:#5F5E5A}
+.row{display:flex}
+.col{display:flex;flex-direction:column}
+</style></helmet>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Assurances page — two ways to render the register</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="2a">
+<div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Side-by-side register, index rail</div>
+<div class="dv-card w" style="width:520px">
+  <div class="row" style="align-items:center;justify-content:space-between;padding:12px 22px;border-bottom:1.5px dashed #cfccc2">
+    <div class="col" style="gap:3px"><span class="eyebrow">A project of Relationality Lab</span><span class="h2" style="font-size:15px">Membership Card Protocol</span></div>
+    <div class="row" style="gap:14px;font:500 9.5px system-ui,sans-serif;color:#5F5E5A;align-items:center"><span>Home</span><span style="color:#63ae22;border-bottom:1.5px solid #63ae22">Assurances</span><span>Get involved</span><span class="b" style="padding:4px 8px;border-radius:20px">GitHub ↗</span></div>
+  </div>
+
+  <div class="sec">
+    <span class="eyebrow">The assurances</span>
+    <div class="h1" style="font-size:26px;margin:7px 0 9px">What the protocol is<br>built to promise</div>
+    <div class="col" style="gap:5px;max-width:340px"><div class="ph" style="width:100%"></div><div class="ph" style="width:94%"></div><div class="ph" style="width:60%"></div></div>
+    <div class="b" style="margin-top:14px;padding:10px 12px;background:#aed38e">
+      <div class="h3" style="margin-bottom:5px">Method — what this list is, and is not</div>
+      <div class="t">Design guarantees, stated plainly so they can be tested. Not a claim that each has been independently verified today.</div>
+    </div>
+  </div>
+
+  <div class="row" style="align-items:flex-start">
+    <div class="col" style="width:132px;gap:7px;padding:20px 14px;border-right:1.5px dashed #cfccc2;position:sticky;top:0">
+      <span class="eyebrow">Index · sticky</span>
+      <div class="col" style="gap:5px;font:500 9.5px/1.4 system-ui,sans-serif;color:#5F5E5A">
+        <span style="color:#63ae22;font-weight:700">A0 Prove &amp; access</span>
+        <span>A1 Why, and by whom</span>
+        <span>A2 Current standing</span>
+        <span>A3 Nothing else</span>
+        <span>A4 Cards stay separate</span>
+        <span>A5 Lost phone</span>
+        <span>A6 Secure inbox</span>
+        <span>A7 Accountability</span>
+        <span>A8 Can't watch you</span>
+        <span>A9 Many operators</span>
+        <span>A10 Long term</span>
+      </div>
+      <div class="hand" style="font-size:13px;margin-top:8px">then: what we<br>do not promise</div>
+    </div>
+
+    <div class="col" style="flex:1">
+      <div class="sec">
+        <div class="row" style="gap:9px;align-items:baseline"><span class="h3" style="color:#63ae22">A0</span><span class="h2" style="font-size:16px;flex:1">A card helps you prove that you are trustworthy and lets you access shared resources</span></div>
+        <div class="row" style="gap:14px;margin-top:12px;align-items:flex-start">
+          <div class="col" style="flex:1;gap:6px"><span class="eyebrow">Plain</span><div class="ph" style="width:100%"></div><div class="ph" style="width:97%"></div><div class="ph" style="width:88%"></div><div class="ph" style="width:100%"></div><div class="ph" style="width:44%"></div></div>
+          <div style="width:1.5px;align-self:stretch;background:repeating-linear-gradient(#cfccc2 0 4px,transparent 4px 8px)"></div>
+          <div class="col" style="flex:1;gap:6px"><span class="eyebrow">Technical</span><div class="ph d" style="width:100%"></div><div class="ph d" style="width:92%"></div><div class="ph d" style="width:100%"></div><div class="ph d" style="width:70%"></div><div class="row" style="gap:5px;margin-top:2px"><span class="chip" style="font-family:ui-monospace,Menlo,monospace">keccak256(pubkey)</span><span class="chip">IPFS</span></div></div>
+        </div>
+        <div class="b" style="margin-top:12px;padding:8px 11px;border-color:#63ae22;background:#aed38e">
+          <div class="h3" style="color:#1c330f;margin-bottom:4px">This does not mean —</div>
+          <div class="t" style="color:#1c330f">verification is free of dependencies.</div>
+        </div>
+        <div class="t" style="margin-top:9px;font-style:italic">Basis: ARCHITECTURE.md §7, ADR-006</div>
+      </div>
+
+      <div class="sec">
+        <div class="row" style="gap:9px;align-items:baseline"><span class="h3" style="color:#63ae22">A1</span><span class="h2" style="font-size:16px;flex:1">You can see why a card was given, and by whom</span></div>
+        <div class="row" style="gap:14px;margin-top:12px;align-items:flex-start">
+          <div class="col" style="flex:1;gap:6px"><span class="eyebrow">Plain</span><div class="ph" style="width:100%"></div><div class="ph" style="width:90%"></div><div class="ph" style="width:66%"></div></div>
+          <div style="width:1.5px;align-self:stretch;background:repeating-linear-gradient(#cfccc2 0 4px,transparent 4px 8px)"></div>
+          <div class="col" style="flex:1;gap:6px"><span class="eyebrow">Technical</span><div class="ph d" style="width:100%"></div><div class="ph d" style="width:96%"></div><div class="ph d" style="width:52%"></div></div>
+        </div>
+        <div class="img" style="height:88px;margin-top:12px">one diagram: card → issuing policy → root</div>
+      </div>
+
+      <div class="sec" style="opacity:.55">
+        <div class="row" style="gap:9px;align-items:baseline"><span class="h3" style="color:#63ae22">A2</span><span class="h2" style="font-size:16px;flex:1">A card reflects current standing, not past standing</span></div>
+        <div class="row" style="gap:14px;margin-top:10px"><div class="col" style="flex:1;gap:6px"><div class="ph" style="width:100%"></div><div class="ph" style="width:80%"></div></div><div class="col" style="flex:1;gap:6px"><div class="ph d" style="width:100%"></div><div class="ph d" style="width:72%"></div></div></div>
+        <div class="hand" style="text-align:center;margin-top:14px;font-size:15px">… A3 – A10 repeat this block …</div>
+      </div>
+
+      <div class="sec" style="background:#aed38e;border-bottom:none">
+        <div class="h2">What we do not promise</div>
+        <div class="col" style="gap:9px;margin-top:10px">
+          <div class="row" style="gap:8px"><span class="h3" style="color:#888780">01</span><div class="col" style="flex:1;gap:4px"><div class="h3">Cards cannot build a community for you.</div><div class="ph" style="width:86%"></div></div></div>
+          <div class="row" style="gap:8px"><span class="h3" style="color:#888780">02</span><div class="col" style="flex:1;gap:4px"><div class="h3">Federation means trusting operators, not trusting no one.</div><div class="ph" style="width:74%"></div></div></div>
+          <div class="row" style="gap:8px"><span class="h3" style="color:#888780">03</span><div class="col" style="flex:1;gap:4px"><div class="h3">We are not claiming these guarantees are verified today.</div><div class="ph" style="width:90%"></div></div></div>
+        </div>
+        <div class="row" style="gap:9px;margin-top:16px;align-items:center"><span class="btn">Get involved</span><span class="btn o">Read the code on GitHub ↗</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="dv-opt" id="2b">
+<div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Plain-first, technical on demand</div>
+<div class="dv-card w" style="width:430px">
+  <div class="row" style="align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1.5px dashed #cfccc2">
+    <div class="col" style="gap:3px"><span class="eyebrow">A project of Relationality Lab</span><span class="h2" style="font-size:14px">Membership Card Protocol</span></div>
+    <div class="row" style="gap:11px;font:500 9px system-ui,sans-serif;color:#5F5E5A;align-items:center"><span>Home</span><span style="color:#63ae22;border-bottom:1.5px solid #63ae22">Assurances</span><span>Get involved</span><span class="b" style="padding:3px 7px;border-radius:20px">GitHub ↗</span></div>
+  </div>
+
+  <div class="sec">
+    <div class="h1" style="font-size:24px">11 things a card is<br>built to guarantee</div>
+    <div class="col" style="gap:5px;margin-top:9px;max-width:300px"><div class="ph" style="width:100%"></div><div class="ph" style="width:82%"></div></div>
+    <div class="row" style="gap:6px;margin-top:13px;flex-wrap:wrap;align-items:center">
+      <span class="eyebrow" style="margin-right:2px">Reading as</span>
+      <span class="chip" style="border-style:solid;border-color:#63ae22;color:#63ae22;font-weight:600">Plain</span>
+      <span class="chip">Plain + technical</span>
+      <span class="chip">Show limits only</span>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:8px;align-items:baseline"><span class="h3" style="color:#63ae22">A0</span><span class="h2" style="font-size:15px;flex:1">A card lets you prove something, and opens doors</span></div>
+    <div class="col" style="gap:6px;margin-top:9px"><div class="ph" style="width:100%"></div><div class="ph" style="width:96%"></div><div class="ph" style="width:100%"></div><div class="ph" style="width:38%"></div></div>
+    <div class="row" style="gap:12px;margin-top:12px">
+      <div class="b" style="flex:1;padding:8px 10px"><div class="h3">Verify a statement</div><div class="ph" style="width:90%;margin-top:5px"></div></div>
+      <div class="b" style="flex:1;padding:8px 10px"><div class="h3">Gain access</div><div class="ph" style="width:80%;margin-top:5px"></div></div>
+    </div>
+    <div class="row" style="gap:8px;margin-top:11px;align-items:center"><span class="b" style="padding:5px 9px;font:600 9px system-ui,sans-serif;color:#63ae22;border-color:#63ae22;border-radius:20px">+ How it works, technically</span><span class="hand" style="font-size:13px">collapsed by default</span></div>
+    <div class="b" style="margin-top:11px;padding:8px 10px;background:#aed38e;border-style:solid;border-color:#D3D1C7"><div class="h3" style="color:#5F5E5A">Limit — verification needs network access to the registry and IPFS.</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:8px;align-items:baseline"><span class="h3" style="color:#63ae22">A4</span><span class="h2" style="font-size:15px;flex:1">Your cards are separate from each other</span></div>
+    <div class="col" style="gap:6px;margin-top:9px"><div class="ph" style="width:100%"></div><div class="ph" style="width:70%"></div></div>
+    <div class="row" style="gap:9px;margin-top:12px">
+      <div class="crd" style="width:104px;height:64px"><span>RUNNING CLUB</span><span style="opacity:.7">no shared id</span></div>
+      <div class="crd" style="width:104px;height:64px"><span>PEDIATRICIAN</span><span style="opacity:.7">no shared id</span></div>
+      <div class="col" style="flex:1;justify-content:center"></div>
+    </div>
+    <div class="b" style="margin-top:11px;padding:9px 11px;background:#FBFAF7">
+      <span class="eyebrow">Technical</span>
+      <div class="col" style="gap:5px;margin-top:6px"><div class="ph d" style="width:100%"></div><div class="ph d" style="width:93%"></div><div class="ph d" style="width:58%"></div></div>
+      <div class="t" style="margin-top:7px;font-style:italic">Basis: ADR-006, specs/subcards.md</div>
+    </div>
+  </div>
+
+  <div class="sec" style="opacity:.55"><div class="hand" style="font-size:15px;text-align:center">… remaining assurances, same pattern …</div></div>
+
+  <div class="sec" style="background:#1c330f;border-bottom:none">
+    <div class="h2" style="color:#fff;font-size:18px">Found a hole in one of these?</div>
+    <div class="col" style="gap:5px;margin-top:8px"><div class="ph" style="width:88%;background:#63ae22"></div><div class="ph" style="width:56%;background:#63ae22"></div></div>
+    <div class="row" style="gap:9px;margin-top:13px"><span class="btn" style="background:#aed38e;color:#1c330f">Two open questions →</span><span class="btn o" style="color:#aed38e;border-color:#aed38e">GitHub ↗</span></div>
+    <div class="hand" style="color:#aed38e;font-size:14px;margin-top:11px">a concrete puzzle recruits better than “please review our protocol”</div>
+  </div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: “take <a class="dv-oid" href="#2a">2a</a>’s index rail into <a class="dv-oid" href="#2b">2b</a>” · “show A5 and A8 written out in <a class="dv-oid" href="#2a">2a</a>” · “more landing directions”</p>
+</section>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Landing page — three structures</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Rhizal skeleton, full scroll</div>
+<div class="dv-card w" style="width:430px">
+  <div class="col" style="padding:10px 20px 12px;border-bottom:1.5px dashed #cfccc2;gap:8px">
+    <span class="eyebrow">A project of Relationality Lab</span>
+    <div class="row" style="align-items:center;justify-content:space-between">
+      <span class="h2" style="font-size:15px">Membership Card Protocol</span>
+      <div class="row" style="gap:11px;font:500 9px system-ui,sans-serif;color:#5F5E5A;align-items:center"><span style="color:#63ae22;border-bottom:1.5px solid #63ae22">Home</span><span>Assurances</span><span>Get involved</span><span class="b" style="padding:3px 7px;border-radius:20px">GitHub ↗</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="h1">Let anyone in your community<br>Create places for your community<br>Anywhere on the internet</div>
+    <div class="t" style="margin-top:11px;font-size:11.5px;color:#2C2C2A">A calendar anyone can post to. A list of free stuff going spare. A members-only game server. A lending library. A board for asking for help and offering it.</div>
+    <div class="row" style="gap:9px;margin-top:14px"><span class="btn">Get involved</span><span class="btn o">Read the assurances</span></div>
+    <div class="row" style="gap:10px;margin-top:16px;align-items:flex-end">
+      <div class="crd" style="width:150px;height:94px"><div class="col" style="gap:3px"><span style="opacity:.75;font-size:7.5px;letter-spacing:.12em">MEMBER SINCE 2024</span><span style="font-size:12px;color:#fff">Riverside Running Club</span></div><span style="opacity:.7">card mockup — hero object</span></div>
+    </div>
+  </div>
+
+  <div class="sec" style="background:#aed38e">
+    <div class="h2" style="font-size:17px;max-width:330px">This is for communities that already exist — a club that meets, a network that gathers, a group with a channel and regulars who know each other.</div>
+    <div class="t" style="margin-top:7px">If you’ve already built the trust, cards give it somewhere to go.</div>
+  </div>
+
+  <div class="sec">
+    <span class="eyebrow">Pillar 1</span>
+    <div class="h2" style="margin-top:6px">Your community can create shared resources anywhere on the internet</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:13px">
+      <div class="b" style="padding:9px 10px"><div class="img" style="height:38px;border:none;background:#EDEBE4">icon</div><div class="h3" style="margin-top:7px">A calendar anyone can post to</div><div class="col" style="gap:4px;margin-top:5px"><div class="ph" style="width:100%"></div><div class="ph" style="width:64%"></div></div></div>
+      <div class="b" style="padding:9px 10px"><div class="img" style="height:38px;border:none;background:#EDEBE4">icon</div><div class="h3" style="margin-top:7px">A free-stuff list</div><div class="col" style="gap:4px;margin-top:5px"><div class="ph" style="width:100%"></div><div class="ph" style="width:52%"></div></div></div>
+      <div class="b" style="padding:9px 10px"><div class="img" style="height:38px;border:none;background:#EDEBE4">icon</div><div class="h3" style="margin-top:7px">A members-only game server</div><div class="col" style="gap:4px;margin-top:5px"><div class="ph" style="width:100%"></div><div class="ph" style="width:70%"></div></div></div>
+      <div class="b" style="padding:9px 10px"><div class="img" style="height:38px;border:none;background:#EDEBE4">icon</div><div class="h3" style="margin-top:7px">A lending library</div><div class="col" style="gap:4px;margin-top:5px"><div class="ph" style="width:100%"></div><div class="ph" style="width:58%"></div></div></div>
+    </div>
+    <div class="b" style="margin-top:11px;padding:9px 11px;border-color:#63ae22"><div class="h3" style="color:#1c330f">Anyone in the community can set something up, not just you. The calendar doesn’t have to be your job.</div></div>
+  </div>
+
+  <div class="sec">
+    <span class="eyebrow">Pillar 2</span>
+    <div class="h2" style="margin-top:6px">Your community can show others it’s worth trusting</div>
+    <div class="row" style="gap:13px;margin-top:12px;align-items:flex-start">
+      <div class="col" style="flex:1;gap:8px">
+        <div class="col" style="gap:4px"><div class="h3">Proves your members belong — and reveals nothing else</div><div class="ph" style="width:88%"></div></div>
+        <div class="col" style="gap:4px"><div class="h3">Anyone can see who vouched, and why</div><div class="ph" style="width:76%"></div></div>
+        <div class="col" style="gap:4px"><div class="h3">Trust travels both directions</div><div class="ph" style="width:82%"></div></div>
+        <div class="col" style="gap:4px"><div class="h3">The cards someone holds aren’t connected</div><div class="ph" style="width:70%"></div></div>
+      </div>
+      <div class="img" style="width:132px;height:126px">photo — real<br>gathering</div>
+    </div>
+    <div class="img" style="height:82px;margin-top:12px">the one diagram: issuance → presentation → verification</div>
+  </div>
+
+  <div class="sec" style="background:#aed38e">
+    <span class="eyebrow">Pillar 3</span>
+    <div class="h2" style="margin-top:6px">Nobody has to move</div>
+    <div class="col" style="gap:7px;margin-top:10px">
+      <div class="h3">Your group chat stays exactly where it is.</div>
+      <div class="h3">Members get a card. That’s the whole ask.</div>
+      <div class="h3">No migration, no integrations, no new platform to learn.</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+      <div class="col" style="gap:5px"><div class="img" style="height:30px;border:none;background:#EDEBE4">ico</div><div class="h3">Standing is current, not historical</div></div>
+      <div class="col" style="gap:5px"><div class="img" style="height:30px;border:none;background:#EDEBE4">ico</div><div class="h3">Each card is a private inbox</div></div>
+      <div class="col" style="gap:5px"><div class="img" style="height:30px;border:none;background:#EDEBE4">ico</div><div class="h3">We can’t see who holds your cards</div></div>
+      <div class="col" style="gap:5px"><div class="img" style="height:30px;border:none;background:#EDEBE4">ico</div><div class="h3">Nobody owns this</div></div>
+    </div>
+    <div class="row" style="gap:7px;margin-top:11px;align-items:center"><span class="hand" style="font-size:14px">each links to its assurance →</span><span class="chip" style="font-family:ui-monospace,Menlo,monospace">A2 A6 A8 A9</span></div>
+  </div>
+
+  <div class="sec" style="background:#1c330f">
+    <div class="row" style="gap:13px;align-items:flex-start">
+      <div class="img" style="width:74px;height:74px;border-color:#63ae22;background:#0a2337;color:#aed38e;flex:none">photo<br>David</div>
+      <div class="col" style="flex:1;gap:7px">
+        <div class="h2" style="color:#fff;font-size:16px">Nothing here works yet.</div>
+        <div class="t" style="color:#aed38e;font-size:10.5px">The protocol’s foundations are built and tested; what doesn’t exist is the app you’d hold it in. I’m looking for a small number of partner communities to build that with — a real working relationship where what you need shapes what gets made.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="h1" style="font-size:24px">Get involved</div>
+    <div class="col" style="gap:10px;margin-top:12px">
+      <div class="b" style="padding:10px 11px"><div class="h3">Community organizers</div><div class="t" style="margin-top:4px">People building communities where people regularly gather.</div><div class="ph" style="width:82%;margin-top:6px"></div></div>
+      <div class="b" style="padding:10px 11px"><div class="h3">Cybersecurity and trust &amp; safety professionals</div><div class="t" style="margin-top:4px">People who can check whether it lives up to its assurances.</div><div class="row" style="gap:6px;margin-top:7px"><span class="chip">Open question 1</span><span class="chip">Open question 2</span></div></div>
+      <div class="b" style="padding:10px 11px"><div class="h3">People building community applications</div><div class="t" style="margin-top:4px">Build the places communities reach with their cards.</div><div class="ph" style="width:74%;margin-top:6px"></div></div>
+    </div>
+  </div>
+
+  <div class="sec" style="background:#aed38e;border-bottom:none">
+    <div class="h2">Start a conversation</div>
+    <div class="col" style="gap:8px;margin-top:11px">
+      <div class="row" style="gap:8px"><div class="b" style="flex:1;padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Name</div><div class="b" style="flex:1;padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Email</div></div>
+      <div class="b" style="padding:9px;background:#FBFAF7">
+        <div class="h3" style="margin-bottom:6px">Which of these are you? <span style="font-weight:400;color:#888780">check all that apply</span></div>
+        <div class="row" style="gap:12px">
+          <div class="row" style="gap:5px;align-items:center"><span class="b" style="width:11px;height:11px"></span><span class="t">Organizer</span></div>
+          <div class="row" style="gap:5px;align-items:center"><span class="b" style="width:11px;height:11px"></span><span class="t">Security / T&amp;S</span></div>
+          <div class="row" style="gap:5px;align-items:center"><span class="b" style="width:11px;height:11px"></span><span class="t">Builder</span></div>
+        </div>
+      </div>
+      <div class="b" style="padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Your community or organization</div>
+      <div class="b" style="padding:8px 9px 26px;font:400 9.5px system-ui,sans-serif;color:#888780">Why are you interested in learning more? <span style="color:#B4B2A9">optional</span></div>
+      <div class="row" style="gap:9px;align-items:center;margin-top:2px"><span class="btn">Start a conversation</span><span class="t" style="max-width:190px">An occasional email, and a real conversation if there’s mutual interest.</span></div>
+    </div>
+    <div class="row" style="gap:12px;margin-top:18px;padding-top:12px;border-top:1.5px dashed #cfccc2;font:500 9px system-ui,sans-serif;color:#888780"><span>Relationality Lab</span><span>Assurances</span><span>GitHub</span><span>Open source</span></div>
+  </div>
+</div>
+</div>
+
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Card as hero object, three acts</div>
+<div class="dv-card w" style="width:470px">
+  <div class="row" style="align-items:center;justify-content:space-between;padding:11px 22px;border-bottom:1.5px dashed #cfccc2">
+    <div class="col" style="gap:3px"><span class="eyebrow">A project of Relationality Lab</span><span class="h2" style="font-size:14px">Membership Card Protocol</span></div>
+    <div class="row" style="gap:11px;font:500 9px system-ui,sans-serif;color:#5F5E5A;align-items:center"><span style="color:#63ae22;border-bottom:1.5px solid #63ae22">Home</span><span>Assurances</span><span>Get involved</span><span class="b" style="padding:3px 7px;border-radius:20px">GitHub ↗</span></div>
+  </div>
+
+  <div class="sec" style="background:#1c330f;padding:26px">
+    <div class="row" style="gap:20px;align-items:center">
+      <div class="col" style="flex:1;gap:12px">
+        <div class="h1" style="color:#fff;font-size:27px">Let anyone in your community<br>Create places for your community<br>Anywhere on the internet</div>
+        <div class="row" style="gap:9px"><span class="btn" style="background:#aed38e;color:#1c330f">Get involved</span><span class="btn o" style="color:#aed38e;border-color:#aed38e">Assurances</span></div>
+      </div>
+      <div class="col" style="gap:-10px;flex:none">
+        <div class="crd" style="width:150px;height:94px;border:1.5px solid #63ae22;transform:rotate(-4deg)"><span style="font-size:11px;color:#fff">Line Dancing Collective</span><span style="opacity:.7">stacked card mockups</span></div>
+        <div class="crd" style="width:150px;height:94px;border:1.5px solid #63ae22;transform:rotate(3deg) translateY(-16px);background:#0a2337"><span style="font-size:11px;color:#fff">Boots on the Ground</span><span style="opacity:.7">issuer-designed faces</span></div>
+      </div>
+    </div>
+    <div class="row" style="gap:6px;margin-top:18px;flex-wrap:wrap">
+      <span class="chip" style="color:#aed38e;border-color:#63ae22">a calendar anyone can post to</span>
+      <span class="chip" style="color:#aed38e;border-color:#63ae22">free stuff going spare</span>
+      <span class="chip" style="color:#aed38e;border-color:#63ae22">members-only game server</span>
+      <span class="chip" style="color:#aed38e;border-color:#63ae22">a lending library</span>
+      <span class="chip" style="color:#aed38e;border-color:#63ae22">a board for asking for help</span>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:14px;align-items:flex-start">
+      <div class="col" style="flex:1;gap:8px">
+        <div class="h2" style="font-size:17px">Built by and for people who build community</div>
+        <div class="col" style="gap:5px;max-width:280px"><div class="ph" style="width:100%"></div><div class="ph" style="width:95%"></div><div class="ph" style="width:82%"></div><div class="ph" style="width:60%"></div></div>
+      </div>
+      <div class="img" style="width:130px;height:70px;flex:none">photo — a room<br>of people</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:16px;align-items:flex-start">
+      <div class="col" style="flex:1;gap:9px">
+        <div class="h2">Build things together</div>
+        <div class="col" style="gap:5px"><div class="ph" style="width:96%"></div><div class="ph" style="width:100%"></div><div class="ph" style="width:56%"></div></div>
+        <div class="b" style="padding:8px 10px;border-color:#63ae22"><div class="h3" style="color:#1c330f">The calendar doesn’t have to be your job.</div></div>
+      </div>
+      <div class="img" style="width:120px;height:100px;flex:none">photo</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:16px;align-items:flex-start">
+      <div class="col" style="flex:1;gap:9px">
+        <div class="h2">Show others you’re worth trusting</div>
+        <div class="col" style="gap:5px"><div class="ph" style="width:100%"></div><div class="ph" style="width:88%"></div><div class="ph" style="width:44%"></div></div>
+        <div class="b" style="padding:8px 10px;border-color:#63ae22"><div class="h3" style="color:#1c330f">Anyone can see who vouched, and why.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="eyebrow">How it works</span>
+    <div class="h2" style="margin-top:6px">How it works</div>
+    <div class="col" style="gap:5px;margin-top:9px;max-width:340px"><div class="ph" style="width:100%"></div><div class="ph" style="width:92%"></div><div class="ph" style="width:70%"></div></div>
+    <div class="img" style="height:90px;margin-top:12px">diagram: who vouched, and why → back to a root you trust</div>
+  </div>
+
+  <div class="sec" style="background:#aed38e">
+    <div class="row" style="gap:16px;align-items:flex-start">
+      <div class="col" style="flex:1;gap:9px">
+        <div class="h2">Nobody has to move</div>
+        <div class="row" style="gap:9px">
+          <div class="b" style="flex:1;padding:8px 9px;background:#FBFAF7"><div class="h3">Group chat stays put</div></div>
+          <div class="b" style="flex:1;padding:8px 9px;background:#FBFAF7"><div class="h3">Members get a card</div></div>
+          <div class="b" style="flex:1;padding:8px 9px;background:#FBFAF7"><div class="h3">Nothing to integrate</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="eyebrow">What’s the catch?</span>
+    <div class="col" style="gap:0;margin-top:9px">
+      <div class="row" style="justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1.5px dashed #cfccc2"><span class="h3">Who can see what my community does?</span><span class="hand" style="font-size:16px">+</span></div>
+      <div class="row" style="justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1.5px dashed #cfccc2"><span class="h3">What if someone loses their phone?</span><span class="hand" style="font-size:16px">+</span></div>
+      <div class="row" style="justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1.5px dashed #cfccc2"><span class="h3">What if someone behaves badly?</span><span class="hand" style="font-size:16px">+</span></div>
+      <div class="row" style="justify-content:space-between;align-items:center;padding:10px 0"><span class="h3">Who owns this?</span><span class="hand" style="font-size:16px">+</span></div>
+    </div>
+    <div class="row" style="gap:8px;margin-top:11px;align-items:center"><span class="btn o">All 11 assurances</span></div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:13px;align-items:flex-start">
+      <div class="img" style="width:80px;height:80px;flex:none">photo<br>David</div>
+      <div class="col" style="flex:1;gap:6px"><div class="h2" style="font-size:16px">Help us build in community</div><div class="t" style="font-size:10.5px">The foundations are built and tested; the app you’d hold it in doesn’t exist. I’m looking for a small number of partner communities to build that with.</div></div>
+    </div>
+  </div>
+
+  <div class="sec" style="background:#aed38e;border-bottom:none">
+    <div class="h1" style="font-size:23px">Get involved</div>
+    <div class="row" style="gap:7px;margin-top:11px">
+      <span class="chip" style="border-style:solid;border-color:#63ae22;color:#63ae22;font-weight:600">Organizers</span>
+      <span class="chip">Security &amp; T&amp;S</span>
+      <span class="chip">Builders</span>
+    </div>
+    <div class="b" style="padding:11px;margin-top:10px;background:#FBFAF7">
+      <div class="h3">Partners who can test the protocol and shape it</div>
+      <div class="col" style="gap:4px;margin-top:6px"><div class="ph" style="width:92%"></div><div class="ph" style="width:62%"></div></div>
+    </div>
+    <div class="col" style="gap:8px;margin-top:11px">
+      <div class="row" style="gap:8px"><div class="b" style="flex:1;padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Name</div><div class="b" style="flex:1;padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Email</div></div>
+      <div class="b" style="padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Community or organization</div>
+      <div class="b" style="padding:8px 9px 24px;font:400 9.5px system-ui,sans-serif;color:#888780">Why are you interested? <span style="color:#B4B2A9">optional</span></div>
+      <span class="btn" style="align-self:flex-start">Start a conversation</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Signal-short, one narrow column</div>
+<div class="dv-card w" style="width:330px">
+  <div class="col" style="padding:11px 18px;border-bottom:1.5px dashed #cfccc2;gap:7px">
+    <span class="eyebrow">A project of Relationality Lab</span>
+    <div class="row" style="gap:9px;font:500 8.5px system-ui,sans-serif;color:#5F5E5A;align-items:center;flex-wrap:wrap"><span style="color:#63ae22;border-bottom:1.5px solid #63ae22">Home</span><span>Assurances</span><span>Get involved</span><span class="b" style="padding:3px 6px;border-radius:20px">GitHub ↗</span></div>
+  </div>
+
+  <div class="sec" style="padding:24px 18px">
+    <div class="h1" style="font-size:23px">Let anyone in your community<br>Create places for your community<br>Anywhere on the internet</div>
+    <div class="t" style="margin-top:10px;font-size:11px;color:#2C2C2A">A calendar anyone can post to. A list of free stuff going spare. A members-only game server. A lending library.</div>
+    <div class="crd" style="width:100%;height:82px;margin-top:14px"><span style="font-size:11px;color:#fff">Your community’s card</span><span style="opacity:.7">one card, centered, no photography above the fold</span></div>
+  </div>
+
+  <div class="sec"><div class="h2" style="font-size:16px">This is for communities that already exist.</div><div class="t" style="margin-top:6px">If you’ve already built the trust, cards give it somewhere to go.</div></div>
+
+  <div class="sec">
+    <div class="h2" style="font-size:16px">Your members build things for each other.</div>
+    <div class="col" style="gap:5px;margin-top:8px"><div class="ph" style="width:100%"></div><div class="ph" style="width:92%"></div><div class="ph" style="width:48%"></div></div>
+  </div>
+
+  <div class="sec">
+    <div class="h2" style="font-size:16px">A card proves one thing and reveals nothing else.</div>
+    <div class="col" style="gap:5px;margin-top:8px"><div class="ph" style="width:100%"></div><div class="ph" style="width:86%"></div><div class="ph" style="width:56%"></div></div>
+    <div class="row" style="gap:6px;margin-top:9px;align-items:center"><span class="t" style="color:#63ae22;font-weight:600">Why you can rely on that →</span></div>
+  </div>
+
+  <div class="sec">
+    <div class="h2" style="font-size:16px">Nobody has to move.</div>
+    <div class="col" style="gap:5px;margin-top:8px"><div class="ph" style="width:96%"></div><div class="ph" style="width:40%"></div></div>
+  </div>
+
+  <div class="sec" style="background:#aed38e">
+    <div class="h2" style="font-size:16px">Nothing here works yet.</div>
+    <div class="col" style="gap:5px;margin-top:8px"><div class="ph" style="width:100%"></div><div class="ph" style="width:88%"></div><div class="ph" style="width:52%"></div></div>
+    <div class="row" style="gap:9px;margin-top:11px;align-items:center"><div class="img" style="width:44px;height:44px;flex:none">David</div><div class="t" style="flex:1">Looking for a small number of partner communities.</div></div>
+  </div>
+
+  <div class="sec" style="border-bottom:none">
+    <div class="h1" style="font-size:21px">Get involved</div>
+    <div class="col" style="gap:7px;margin-top:10px">
+      <div class="row" style="gap:7px;align-items:baseline"><span class="b" style="width:10px;height:10px;flex:none;margin-top:2px"></span><div class="col" style="gap:3px"><span class="h3">Organizers</span><span class="t">Test it, shape it, help govern it.</span></div></div>
+      <div class="row" style="gap:7px;align-items:baseline"><span class="b" style="width:10px;height:10px;flex:none;margin-top:2px"></span><div class="col" style="gap:3px"><span class="h3">Security &amp; trust and safety</span><span class="t">Two open questions, both real.</span></div></div>
+      <div class="row" style="gap:7px;align-items:baseline"><span class="b" style="width:10px;height:10px;flex:none;margin-top:2px"></span><div class="col" style="gap:3px"><span class="h3">Builders</span><span class="t">Make the places cards reach.</span></div></div>
+    </div>
+    <div class="col" style="gap:7px;margin-top:12px">
+      <div class="b" style="padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Name</div>
+      <div class="b" style="padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Email</div>
+      <div class="b" style="padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Community or organization</div>
+      <span class="btn" style="align-self:stretch;text-align:center">Start a conversation</span>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+<p class="dv-next">Try next: “combine <a class="dv-oid" href="#1a">1a</a>’s example grid with <a class="dv-oid" href="#1c">1c</a>’s length” · “make <a class="dv-oid" href="#1b">1b</a>’s hero photographic instead of card-led” · “wireframe the get-involved section on its own”</p>
+</section>
+</x-dc>
+</body>
+</html>

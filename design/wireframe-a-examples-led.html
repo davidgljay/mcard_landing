@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframe A — Examples led</title>
+<style>
+  :root { --teal-800:#085041; --teal-600:#0F6E56; --teal-100:#9FE1CB; --teal-50:#E1F5EE;
+          --gray-900:#2C2C2A; --gray-600:#5F5E5A; --gray-400:#888780; --gray-100:#D3D1C7; --gray-50:#F1EFE8; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--gray-50); color:var(--gray-900);
+         font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  .page { max-width:860px; margin:0 auto; background:#fff; }
+  .sec { padding:56px 64px; border-bottom:1px solid var(--gray-100); position:relative; }
+  .tag { position:absolute; top:8px; right:12px; font-size:10px; letter-spacing:.08em;
+         text-transform:uppercase; color:var(--gray-400); }
+  .eyebrow { font-size:13px; color:var(--teal-600); margin:0 0 20px; }
+  h1 { font-size:40px; line-height:1.15; font-weight:500; margin:0; letter-spacing:-.01em; }
+  h2 { font-size:26px; font-weight:500; margin:0 0 14px; }
+  h3 { font-size:17px; font-weight:500; margin:0 0 8px; }
+  p { margin:0 0 12px; color:var(--gray-600); }
+  .bar { height:9px; background:var(--gray-100); border-radius:5px; margin:7px 0; }
+  .w90{width:90%}.w75{width:75%}.w60{width:60%}.w45{width:45%}
+  .hero { background:var(--teal-800); color:#fff; }
+  .hero h1 { color:#fff; }
+  .hero .bar { background:rgba(255,255,255,.22); }
+  .examples { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px; margin-top:8px; }
+  .ex { border:1px solid var(--gray-100); border-radius:10px; padding:16px; background:var(--gray-50); }
+  .card-mock { width:190px; height:118px; background:var(--teal-800); border-radius:12px;
+               color:var(--teal-100); padding:14px; font-size:12px; }
+  .pillar { border-left:3px solid var(--teal-600); padding-left:18px; margin-bottom:34px; }
+  .note { background:var(--teal-50); border-radius:10px; padding:20px 24px; }
+  .cta { background:var(--gray-50); }
+  .roles { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0 26px; }
+  .role { background:#fff; border:1px solid var(--gray-100); border-radius:10px; padding:16px; }
+  .field { height:34px; border:1px solid var(--gray-100); border-radius:6px; background:#fff; margin:8px 0; }
+  .btn { display:inline-block; background:var(--teal-600); color:#fff; padding:11px 22px;
+         border-radius:6px; font-size:15px; margin-top:8px; }
+  .foot { padding:26px 64px; font-size:13px; color:var(--gray-400); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="sec hero">
+    <span class="tag" style="color:rgba(255,255,255,.5)">1 · hero</span>
+    <p class="eyebrow" style="color:var(--teal-100)">A project of Relationality Lab</p>
+    <h1>Let anyone in your community<br>Create places for your community<br>Anywhere on the internet</h1>
+    <div style="margin-top:26px;max-width:460px">
+      <div class="bar w90"></div><div class="bar w60"></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="tag">2 · examples — immediately</span>
+    <div class="examples">
+      <div class="ex"><h3>A shared calendar</h3><div class="bar w90"></div><div class="bar w60"></div></div>
+      <div class="ex"><h3>Free stuff going spare</h3><div class="bar w90"></div><div class="bar w45"></div></div>
+      <div class="ex"><h3>A members-only server</h3><div class="bar w75"></div><div class="bar w60"></div></div>
+      <div class="ex"><h3>A lending library</h3><div class="bar w90"></div><div class="bar w45"></div></div>
+      <div class="ex"><h3>Asking for help</h3><div class="bar w75"></div><div class="bar w60"></div></div>
+      <div class="ex" style="background:#fff;border-style:dashed"><h3>Something else</h3><div class="bar w90"></div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="tag">3 · qualifier</span>
+    <div class="note">
+      <h2>This is for communities that already exist</h2>
+      <div class="bar w90"></div><div class="bar w75"></div>
+    </div>
+  </div>
+
+  <div class="sec" style="display:flex;gap:44px;align-items:flex-start">
+    <div style="flex:1">
+      <span class="tag">4 · what a card is</span>
+      <h2>What a card is</h2>
+      <div class="bar w90"></div><div class="bar w90"></div><div class="bar w60"></div>
+    </div>
+    <div class="card-mock">Boots on the Ground<br><br>member</div>
+  </div>
+
+  <div class="sec">
+    <span class="tag">5 · three pillars</span>
+    <div class="pillar">
+      <h2>Create shared resources anywhere on the internet</h2>
+      <div class="bar w90"></div><div class="bar w75"></div><div class="bar w45"></div>
+    </div>
+    <div class="pillar">
+      <h2>Show others your community is worth trusting</h2>
+      <div class="bar w90"></div><div class="bar w60"></div><div class="bar w75"></div>
+    </div>
+    <div class="pillar">
+      <h2>Nobody has to move</h2>
+      <div class="bar w75"></div><div class="bar w60"></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="tag">6 · assurances teaser → page 2</span>
+    <h2>What you can count on</h2>
+    <div class="bar w90"></div><div class="bar w60"></div>
+    <p style="margin-top:14px;color:var(--teal-600)">Read all eleven assurances →</p>
+  </div>
+
+  <div class="sec">
+    <span class="tag">7 · honest state — before CTA</span>
+    <div class="note" style="background:var(--gray-50)">
+      <h2>Nothing here works yet</h2>
+      <div class="bar w90"></div><div class="bar w75"></div><div class="bar w45"></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="tag">8 · who's behind this</span>
+    <h2>Who's behind this</h2>
+    <div class="bar w90"></div><div class="bar w60"></div>
+  </div>
+
+  <div class="sec cta">
+    <span class="tag">9 · get involved + form</span>
+    <h2>Get involved</h2>
+    <div class="roles">
+      <div class="role"><h3>Community organizers</h3><div class="bar w90"></div><div class="bar w60"></div></div>
+      <div class="role"><h3>Security &amp; trust and safety</h3><div class="bar w90"></div><div class="bar w75"></div></div>
+      <div class="role"><h3>People building applications</h3><div class="bar w90"></div><div class="bar w60"></div></div>
+    </div>
+    <div style="max-width:420px">
+      <div class="field"></div><div class="field"></div><div class="field"></div>
+      <div class="field" style="height:70px"></div>
+      <div class="btn">Start a conversation</div>
+    </div>
+  </div>
+
+  <div class="foot">A project of Relationality Lab · Open source · Assurances · GitHub</div>
+</div>
+</body>
+</html>

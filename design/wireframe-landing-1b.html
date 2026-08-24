@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landing page wireframe — 1b, card as hero object</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif;padding:40px}
+.hd{display:flex;align-items:baseline;gap:9px;margin:0 0 18px}
+.hd .id{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:5px}
+.hd .nm{font:600 12px system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{width:470px;max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+a{color:#0F6E56}
+a:hover{color:#085041}
+.w{background:#FBFAF7;color:#2C2C2A}
+.b{border:1.5px dashed #888780;border-radius:3px}
+.sec{padding:22px 26px;border-bottom:1.5px dashed #cfccc2}
+.ph{background:#D3D1C7;border-radius:2px;height:7px}
+.ph.d{background:#B4B2A9}
+.hand{font-family:Caveat,cursive;color:#5F5E5A}
+.note{font-family:Caveat,cursive;font-size:15px;color:#0F6E56;transform:rotate(-1.2deg)}
+.h1{font-family:Caveat,cursive;font-size:31px;line-height:1.05;color:#2C2C2A;font-weight:700}
+.h2{font-family:Caveat,cursive;font-size:20px;color:#2C2C2A;font-weight:700}
+.h3{font:600 11px/1.3 system-ui,sans-serif;letter-spacing:.02em}
+.t{font:400 10.5px/1.5 system-ui,sans-serif;color:#5F5E5A}
+.eyebrow{font:600 8.5px/1 system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#888780}
+.btn{font:600 10px system-ui,sans-serif;padding:8px 13px;border-radius:4px;background:#0F6E56;color:#fff;display:inline-block}
+.btn.o{background:transparent;color:#0F6E56;border:1.5px solid #0F6E56}
+.img{border:1.5px dashed #888780;background:repeating-linear-gradient(135deg,#EDEBE4 0 6px,#F7F6F1 6px 12px);display:flex;align-items:center;justify-content:center;font-family:Caveat,cursive;font-size:13px;color:#888780;border-radius:3px;text-align:center}
+.crd{background:#085041;border-radius:7px;color:#9FE1CB;padding:11px 12px;display:flex;flex-direction:column;justify-content:space-between;font:600 9px system-ui,sans-serif}
+.chip{border:1.2px dashed #888780;border-radius:20px;padding:5px 10px;font:400 9.5px system-ui,sans-serif;color:#5F5E5A}
+.row{display:flex}
+.col{display:flex;flex-direction:column}
+</style>
+</head>
+<body>
+<div class="hd"><span class="id">1b</span><span class="nm">Landing page wireframe — card as hero object, three acts</span></div>
+
+<div class="dv-card w">
+  <div class="row" style="align-items:center;justify-content:space-between;padding:11px 22px;border-bottom:1.5px dashed #cfccc2">
+    <div class="col" style="gap:3px"><span class="eyebrow">A project of Relationality Lab</span><span class="h2" style="font-size:14px">Membership Card Protocol</span></div>
+    <div class="row" style="gap:11px;font:500 9px system-ui,sans-serif;color:#5F5E5A;align-items:center"><span style="color:#0F6E56;border-bottom:1.5px solid #0F6E56">Home</span><span>Assurances</span><span>Get involved</span><span class="b" style="padding:3px 7px;border-radius:20px">GitHub &#8599;</span></div>
+  </div>
+
+  <div class="sec" style="background:#085041;padding:26px">
+    <div class="row" style="gap:20px;align-items:center">
+      <div class="col" style="flex:1;gap:12px">
+        <div class="h1" style="color:#fff;font-size:27px">Let anyone in your community<br>Create places for your community<br>Anywhere on the internet</div>
+        <div class="row" style="gap:9px"><span class="btn" style="background:#9FE1CB;color:#085041">Get involved</span><span class="btn o" style="color:#9FE1CB;border-color:#9FE1CB">Assurances</span></div>
+      </div>
+      <div class="col" style="flex:none">
+        <div class="crd" style="width:150px;height:94px;border:1.5px solid #1D9E75;transform:rotate(-4deg)"><span style="font-size:11px;color:#fff">Line Dancing Collective</span><span style="opacity:.7">stacked card mockups</span></div>
+        <div class="crd" style="width:150px;height:94px;border:1.5px solid #1D9E75;transform:rotate(3deg) translateY(-16px);background:#0b5c4a"><span style="font-size:11px;color:#fff">Boots on the Ground</span><span style="opacity:.7">issuer-designed faces</span></div>
+      </div>
+    </div>
+    <div class="row" style="gap:6px;margin-top:18px;flex-wrap:wrap">
+      <span class="chip" style="color:#9FE1CB;border-color:#1D9E75">a calendar anyone can post to</span>
+      <span class="chip" style="color:#9FE1CB;border-color:#1D9E75">free stuff going spare</span>
+      <span class="chip" style="color:#9FE1CB;border-color:#1D9E75">members-only game server</span>
+      <span class="chip" style="color:#9FE1CB;border-color:#1D9E75">a lending library</span>
+      <span class="chip" style="color:#9FE1CB;border-color:#1D9E75">a board for asking for help</span>
+    </div>
+    <div class="note" style="color:#9FE1CB;margin-top:12px">examples as a chip menu, inside the hero</div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:14px;align-items:center">
+      <div class="h2" style="flex:1;font-size:17px">This is for communities that already exist. If you&#8217;ve already built the trust, cards give it somewhere to go.</div>
+      <div class="img" style="width:130px;height:70px;flex:none">photo &#8212; a room<br>of people</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:16px;align-items:flex-start">
+      <span class="h1" style="font-size:34px;color:#B4B2A9">01</span>
+      <div class="col" style="flex:1;gap:9px">
+        <div class="h2">Build things together</div>
+        <div class="col" style="gap:5px"><div class="ph" style="width:96%"></div><div class="ph" style="width:100%"></div><div class="ph" style="width:56%"></div></div>
+        <div class="b" style="padding:8px 10px;border-color:#0F6E56"><div class="h3" style="color:#085041">The calendar doesn&#8217;t have to be your job.</div></div>
+      </div>
+      <div class="img" style="width:120px;height:100px;flex:none">photo</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:16px;align-items:flex-start">
+      <span class="h1" style="font-size:34px;color:#B4B2A9">02</span>
+      <div class="col" style="flex:1;gap:9px">
+        <div class="h2">Show others you&#8217;re worth trusting</div>
+        <div class="col" style="gap:5px"><div class="ph" style="width:100%"></div><div class="ph" style="width:88%"></div><div class="ph" style="width:44%"></div></div>
+        <div class="img" style="height:80px">diagram: who vouched, and why &#8594; back to a root you trust</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" style="background:#F1EFE8">
+    <div class="row" style="gap:16px;align-items:flex-start">
+      <span class="h1" style="font-size:34px;color:#B4B2A9">03</span>
+      <div class="col" style="flex:1;gap:9px">
+        <div class="h2">Nobody has to move</div>
+        <div class="row" style="gap:9px">
+          <div class="b" style="flex:1;padding:8px 9px;background:#FBFAF7"><div class="h3">Group chat stays put</div></div>
+          <div class="b" style="flex:1;padding:8px 9px;background:#FBFAF7"><div class="h3">Members get a card</div></div>
+          <div class="b" style="flex:1;padding:8px 9px;background:#FBFAF7"><div class="h3">Nothing to integrate</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="eyebrow">What&#8217;s the catch?</span>
+    <div class="col" style="gap:0;margin-top:9px">
+      <div class="row" style="justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1.5px dashed #cfccc2"><span class="h3">Who can see what my community does?</span><span class="hand" style="font-size:16px">+</span></div>
+      <div class="row" style="justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1.5px dashed #cfccc2"><span class="h3">What if someone loses their phone?</span><span class="hand" style="font-size:16px">+</span></div>
+      <div class="row" style="justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1.5px dashed #cfccc2"><span class="h3">What if someone behaves badly?</span><span class="hand" style="font-size:16px">+</span></div>
+      <div class="row" style="justify-content:space-between;align-items:center;padding:10px 0"><span class="h3">Who owns this?</span><span class="hand" style="font-size:16px">+</span></div>
+    </div>
+    <div class="row" style="gap:8px;margin-top:11px;align-items:center"><span class="btn o">All 11 assurances</span><span class="note">disclosure keeps the page short; depth lives on page 2</span></div>
+  </div>
+
+  <div class="sec">
+    <div class="row" style="gap:13px;align-items:flex-start">
+      <div class="img" style="width:80px;height:80px;flex:none">photo<br>David</div>
+      <div class="col" style="flex:1;gap:6px"><div class="h2" style="font-size:16px">Nothing here works yet.</div><div class="t" style="font-size:10.5px">The foundations are built and tested; the app you&#8217;d hold it in doesn&#8217;t exist. I&#8217;m looking for a small number of partner communities to build that with.</div></div>
+    </div>
+  </div>
+
+  <div class="sec" style="background:#F1EFE8;border-bottom:none">
+    <div class="h1" style="font-size:23px">Get involved</div>
+    <div class="row" style="gap:7px;margin-top:11px">
+      <span class="chip" style="border-style:solid;border-color:#0F6E56;color:#0F6E56;font-weight:600">Organizers</span>
+      <span class="chip">Security &amp; T&amp;S</span>
+      <span class="chip">Builders</span>
+    </div>
+    <div class="b" style="padding:11px;margin-top:10px;background:#FBFAF7">
+      <div class="h3">Partners who can test the protocol and shape it</div>
+      <div class="col" style="gap:4px;margin-top:6px"><div class="ph" style="width:92%"></div><div class="ph" style="width:62%"></div></div>
+    </div>
+    <div class="note" style="margin-top:9px">tabs, one form below &#8212; checkboxes still let people be two things</div>
+    <div class="col" style="gap:8px;margin-top:11px">
+      <div class="row" style="gap:8px"><div class="b" style="flex:1;padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Name</div><div class="b" style="flex:1;padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Email</div></div>
+      <div class="b" style="padding:8px 9px;font:400 9.5px system-ui,sans-serif;color:#888780">Community or organization</div>
+      <div class="b" style="padding:8px 9px 24px;font:400 9.5px system-ui,sans-serif;color:#888780">Why are you interested? <span style="color:#B4B2A9">optional</span></div>
+      <span class="btn" style="align-self:flex-start">Start a conversation</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

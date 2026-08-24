@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframe — chosen direction</title>
+<style>
+  :root { --teal-800:#085041; --teal-600:#0F6E56; --teal-400:#1D9E75; --teal-100:#9FE1CB; --teal-50:#E1F5EE;
+          --gray-900:#2C2C2A; --gray-600:#5F5E5A; --gray-400:#888780; --gray-100:#D3D1C7; --gray-50:#F1EFE8; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--gray-50); color:var(--gray-900);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  .page { max-width:880px; margin:0 auto; background:#fff; }
+  .sec { padding:60px 68px; border-bottom:1px solid var(--gray-100); position:relative; }
+  .tag { position:absolute; top:8px; right:12px; font-size:10px; letter-spacing:.08em;
+         text-transform:uppercase; color:var(--gray-400); }
+  .eyebrow { font-size:13px; margin:0 0 22px; }
+  h1 { font-size:42px; line-height:1.14; font-weight:500; margin:0; letter-spacing:-.015em; }
+  h2 { font-size:27px; font-weight:500; margin:0 0 14px; letter-spacing:-.01em; }
+  h3 { font-size:17px; font-weight:500; margin:0 0 8px; }
+  .lede { font-size:18px; color:var(--gray-600); max-width:520px; margin:24px 0 0; }
+  .bar { height:9px; background:var(--gray-100); border-radius:5px; margin:7px 0; }
+  .w95{width:95%}.w85{width:85%}.w70{width:70%}.w55{width:55%}.w40{width:40%}
+  .hero { background:var(--teal-800); color:#fff; padding-bottom:66px; }
+  .hero h1 { color:#fff; }
+  .hero .lede { color:var(--teal-100); }
+  .pillars { display:grid; gap:38px; }
+  .pillar { border-left:3px solid var(--teal-400); padding-left:20px; }
+  .pillar .bar { max-width:600px; }
+  .photo { height:210px; background:var(--gray-100); border-radius:12px; display:flex;
+           align-items:center; justify-content:center; color:var(--gray-400); font-size:13px; margin:0 0 30px; }
+  .story { border-left:3px solid var(--teal-100); padding-left:24px; }
+  .beat { margin-bottom:28px; }
+  .beat:last-child { margin-bottom:0; }
+  .examples { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:14px; margin-top:22px; }
+  .ex { border:1px solid var(--gray-100); border-radius:10px; padding:16px 18px; background:var(--gray-50); }
+  .state { background:var(--teal-50); border-radius:12px; padding:26px 30px; }
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:0; margin:22px 0 4px; }
+  .step { padding:0 16px; border-top:3px solid var(--gray-100); padding-top:12px; }
+  .step.done { border-top-color:var(--teal-600); }
+  .step.now { border-top-color:var(--teal-400); }
+  .step small { font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--gray-400); }
+  .step.done small, .step.now small { color:var(--teal-600); }
+  .cta { background:var(--gray-50); }
+  .roles { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:20px 0 30px; }
+  .role { background:#fff; border:1px solid var(--gray-100); border-radius:10px; padding:18px; }
+  .field { height:36px; border:1px solid var(--gray-100); border-radius:6px; background:#fff; margin:9px 0; }
+  .checks { display:flex; gap:18px; margin:12px 0; flex-wrap:wrap; }
+  .chk { display:flex; gap:8px; align-items:center; font-size:14px; color:var(--gray-600); }
+  .box { width:17px; height:17px; border:2px solid var(--teal-600); border-radius:4px; }
+  .btn { display:inline-block; background:var(--teal-600); color:#fff; padding:12px 24px;
+         border-radius:6px; font-size:15px; margin-top:10px; }
+  .foot { padding:30px 68px; font-size:13px; color:var(--gray-400); display:flex; gap:22px; flex-wrap:wrap; }
+  .card-mock { width:200px; height:124px; background:var(--teal-800); border-radius:12px;
+               color:var(--teal-100); padding:15px; font-size:12px; flex:none; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="sec hero">
+    <span class="tag" style="color:rgba(255,255,255,.45)">1 · hero</span>
+    <p class="eyebrow" style="color:var(--teal-100)">A project of Relationality Lab</p>
+    <h1>Let anyone in your community<br>Create places for your community<br>Anywhere on the internet</h1>
+    <p class="lede">One line naming who this is for — a community that already meets, already has a channel, already has regulars.</p>
+  </div>
+
+  <div class="sec">
+    <span class="tag">2 · three pillars — the frame</span>
+    <div class="pillars">
+      <div class="pillar">
+        <h2>Create shared resources anywhere on the internet</h2>
+        <div class="bar w95"></div><div class="bar w70"></div>
+      </div>
+      <div class="pillar">
+        <h2>Show others your community is worth trusting</h2>
+        <div class="bar w95"></div><div class="bar w55"></div>
+      </div>
+      <div class="pillar">
+        <h2>Nobody has to move</h2>
+        <div class="bar w85"></div><div class="bar w40"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="tag">3 · narrative — makes it concrete</span>
+    <div class="photo">photograph of a real gathering</div>
+    <div class="story">
+      <div class="beat">
+        <h3>Desiree runs a line-dancing club in Tulsa</h3>
+        <div class="bar w95"></div><div class="bar w70"></div>
+      </div>
+      <div class="beat">
+        <h3>She hands out cards at a Thursday dance</h3>
+        <div class="bar w85"></div><div class="bar w55"></div>
+      </div>
+      <div class="beat">
+        <h3>A member builds a calendar. Someone else starts a lending list.</h3>
+        <div class="bar w95"></div><div class="bar w70"></div>
+      </div>
+      <div class="beat">
+        <h3>When she asks the city for support, her card speaks for her</h3>
+        <div class="bar w85"></div><div class="bar w40"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="tag">4 · what you can create</span>
+    <h2>What your community could make</h2>
+    <div class="bar w70" style="max-width:520px"></div>
+    <div class="examples">
+      <div class="ex"><h3>A shared calendar</h3><div class="bar w95"></div><div class="bar w55"></div></div>
+      <div class="ex"><h3>Free stuff going spare</h3><div class="bar w85"></div><div class="bar w40"></div></div>
+      <div class="ex"><h3>A members-only game server</h3><div class="bar w95"></div><div class="bar w55"></div></div>
+      <div class="ex"><h3>A lending library</h3><div class="bar w85"></div><div class="bar w40"></div></div>
+      <div class="ex"><h3>A board for asking and offering help</h3><div class="bar w95"></div><div class="bar w55"></div></div>
+      <div class="ex" style="background:#fff;border-style:dashed">
+        <h3>Whatever your community needs</h3><div class="bar w85"></div>
+      </div>
+    </div>
+    <div style="display:flex;gap:30px;align-items:center;margin-top:34px">
+      <div class="card-mock">Boots on the Ground<br><br>member</div>
+      <div style="flex:1"><h3>What a card actually is</h3><div class="bar w95"></div><div class="bar w70"></div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <span class="tag">5 · where the project is — positive, honest</span>
+    <div class="state">
+      <h2>The foundations are built. The rest gets designed with partners.</h2>
+      <div class="bar w95" style="background:#fff"></div>
+      <div class="bar w70" style="background:#fff"></div>
+      <div class="steps">
+        <div class="step done"><small>Built</small><h3>The protocol</h3><div class="bar w85"></div></div>
+        <div class="step now"><small>Next, 1–3 months</small><h3>An app to hold cards</h3><div class="bar w85"></div></div>
+        <div class="step"><small>With partners</small><h3>Real communities using it</h3><div class="bar w85"></div></div>
+      </div>
+    </div>
+    <p style="margin-top:24px;color:var(--teal-600)">What you can count on — read the assurances →</p>
+  </div>
+
+  <div class="sec">
+    <span class="tag">6 · who's behind this</span>
+    <div style="display:flex;gap:26px;align-items:flex-start">
+      <div style="width:92px;height:92px;border-radius:50%;background:var(--gray-100);flex:none"></div>
+      <div style="flex:1">
+        <h2>Who's behind this</h2>
+        <div class="bar w95"></div><div class="bar w70"></div><div class="bar w40"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec cta">
+    <span class="tag">7 · get involved + form</span>
+    <h2>Get involved</h2>
+    <div class="bar w70" style="max-width:520px"></div>
+    <div class="roles">
+      <div class="role"><h3>Community organizers</h3><div class="bar w95"></div><div class="bar w70"></div></div>
+      <div class="role"><h3>Security, trust and safety</h3><div class="bar w95"></div><div class="bar w70"></div></div>
+      <div class="role"><h3>People building applications</h3><div class="bar w95"></div><div class="bar w70"></div></div>
+    </div>
+    <div style="max-width:440px">
+      <div class="field"></div>
+      <div class="field"></div>
+      <div class="checks">
+        <div class="chk"><div class="box"></div>Organizer</div>
+        <div class="chk"><div class="box"></div>Security</div>
+        <div class="chk"><div class="box"></div>Builder</div>
+      </div>
+      <div class="field"></div>
+      <div class="field" style="height:74px"></div>
+      <div class="btn">Start a conversation</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>A project of Relationality Lab</span><span>The assurances</span>
+    <span>GitHub</span><span>Open source</span>
+  </div>
+</div>
+</body>
+</html>

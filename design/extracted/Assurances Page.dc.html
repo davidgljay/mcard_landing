@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0}
+  a{color:#3f7a13}
+  a:hover{color:#1c330f}
+  ::selection{background:#aed38e;color:#0a2337}
+</style>
+</helmet>
+
+<div style="font-family:'Inter',system-ui,sans-serif;background:#ffffff;color:#0a2337;line-height:1.55">
+
+  <!-- NAV -->
+  <div style="display:flex;flex-direction:column;gap:2px;padding:16px 48px 0;position:sticky;top:0;background:#ffffff;z-index:10;border-bottom:1px solid #e7e4da">
+    <span style="font:600 11px/1 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#63ae22">A project of Relationality Lab</span>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0 16px">
+      <span style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:22px;color:#0a2337">Membership Card Protocol</span>
+      <div style="display:flex;align-items:center;gap:32px;font:500 15px/1 'Inter',sans-serif">
+        <a href="#" style="color:#0a2337;text-decoration:none">Home</a>
+        <a href="#top" style="color:#0a2337;text-decoration:none;border-bottom:2px solid #63ae22;padding-bottom:4px">Assurances</a>
+        <a href="#" style="color:#0a2337;text-decoration:none">Get involved</a>
+        <a href="#" style="color:#0a2337;text-decoration:none;display:flex;align-items:center;gap:6px;border:1.5px solid #0a2337;border-radius:20px;padding:6px 14px">GitHub ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div id="top" style="padding:56px 48px 40px;max-width:1280px;margin:0 auto">
+    <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#63ae22">The assurances</span>
+    <h1 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:44px;margin:12px 0 20px;color:#0a2337;max-width:760px">What the protocol is built to promise</h1>
+    <p style="font-size:16.5px;color:#33424a;max-width:720px;margin:0 0 24px">These are design guarantees: what the Membership Card Protocol is built to promise. They are stated plainly, in public, so that they can be tested against the implementation and audited by people who know how to break things.</p>
+    <div style="background:#f7f6f0;border-radius:12px;padding:20px 24px;max-width:720px">
+      <span style="font:700 14px 'Inter',sans-serif;color:#0a2337">Method — what this list is, and is not</span>
+      <p style="font-size:14.5px;color:#33424a;margin:8px 0 0">What this list is: what the protocol is designed to guarantee and is being audited against. What it is not: a claim that each guarantee has been independently verified today.</p>
+    </div>
+  </div>
+
+  <!-- BODY: INDEX + ASSURANCES -->
+  <div style="display:grid;grid-template-columns:220px 1fr;gap:48px;max-width:1280px;margin:0 auto;padding:0 48px 80px;align-items:start">
+
+    <!-- STICKY INDEX -->
+    <div style="position:sticky;top:90px;display:flex;flex-direction:column;gap:10px;padding-top:8px">
+      <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c;margin-bottom:4px">Index</span>
+      <a href="#a0" style="font:600 14px 'Inter',sans-serif;color:#3f7a13;text-decoration:none">A0 · Prove &amp; access</a>
+      <a href="#a1" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A1 · Why, and by whom</a>
+      <a href="#a2" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A2 · Current standing</a>
+      <a href="#a3" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A3 · Nothing else</a>
+      <a href="#a4" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A4 · Cards stay separate</a>
+      <a href="#a5" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A5 · Lost phone</a>
+      <a href="#a6" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A6 · Secure inbox</a>
+      <a href="#a7" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A7 · Accountability</a>
+      <a href="#a8" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A8 · Can't watch you</a>
+      <a href="#a9" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A9 · Many operators</a>
+      <a href="#a10" style="font:500 14px 'Inter',sans-serif;color:#33424a;text-decoration:none">A10 · Long term</a>
+      <a href="#not-promise" style="font:500 14px 'Inter',sans-serif;color:#8a887c;text-decoration:none;margin-top:8px">What we don't promise</a>
+    </div>
+
+    <!-- ASSURANCE LIST -->
+    <div style="display:flex;flex-direction:column">
+
+      <!-- A0 -->
+      <div id="a0" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 0</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">A card helps you prove that you are trustworthy and lets you access shared resources</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">A card lets you prove a statement about yourself and lets online services act on it. Show your card and a claim comes with it — <em>this person is a member of the running club</em> — along with proof it was really issued to you.</p>
+            <p style="font-size:15px;color:#33424a;margin:0">Two uses: verify a statement attached to a message, or gain access by presenting your card to a service that checks it.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Proof is a signature pointing to a document on IPFS. The verifier checks the signature, derives the on-chain registry address (<code style="background:#f0efe6;padding:1px 5px;border-radius:4px;font-size:13px">keccak256(pubkey)</code>), reads the registry entry, fetches and decrypts the referenced document, then walks the chain to a trusted root.</p>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Verification is a library, not a service — no API key, no permission, no call home.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> verification is free of dependencies. A verifier needs network access to the registry and IPFS.</span>
+        </div>
+      </div>
+
+      <!-- A1 -->
+      <div id="a1" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 1</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">You can see why a card was given, and by whom</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">Every card carries a chain of verification. When someone shows you a card, you can see who issued it, why it was issued, and why the issuer is who they say they are — following the chain back to a root you already trust.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Each card document references an issuer, an issuing policy, and its ancestry. A verifier walks the chain from the presented card to a trusted root, checking signature validity and issuer authorization at each link.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> the chain tells you a person is trustworthy. It tells you who vouched for what, and lets you decide whether you trust them.</span>
+        </div>
+      </div>
+
+      <!-- A2 -->
+      <div id="a2" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 2</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">A card reflects current standing, not past standing</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">Cards can be updated and revoked. If someone's standing changes, the issuer (or someone else authorized) can update or revoke it. A card you're shown tells you where things stand now — not when it was issued.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Cards include an append-only log of updates, some benign (key rotation), others revocations (codes 800–999), registered on a smart contract on Arbitrum One. A press posts the latest version to IPFS and updates the contract to point to it.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> revocation propagates instantly everywhere. It means revocation is authoritative and cannot be hidden from a verifier who checks.</span>
+        </div>
+      </div>
+
+      <!-- A3 -->
+      <div id="a3" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 3</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">A card says why you're trustworthy and nothing else</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">A card proves one thing — that you're a member of a community, a licensed practitioner, a student — without revealing anything else about you. They allow you to be both anonymous and verified.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">A card asserts the statement defined by its issuing policy. Personally identifying fields appear only where the policy specifies them, and the holder must countersign at issuance for the card to be valid.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> a card is contentless. Presenting a card reveals the card's statement and its issuance chain.</span>
+        </div>
+      </div>
+
+      <!-- A4 -->
+      <div id="a4" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 4</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">Your cards are separate from each other</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">The cards you hold are not connected. You can show a professional credential in one place and a fan club card in another, with no way to tell they belong to the same person unless you present them together.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Each card has its own keypair, registry address (derived one-way from its public key), and content key. There is no shared identifier across a holder's cards, and no directory that enumerates them.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> behavioural correlation is impossible. It means the protocol itself provides no linkage.</span>
+        </div>
+      </div>
+
+      <!-- A5 -->
+      <div id="a5" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 5</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">Losing your phone doesn't mean losing your cards</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">Your cards live on your device, and you can get them back if it's lost, stolen, or replaced. Recovery doesn't depend on any single service staying in business. You choose how strong to make it: a hardware key, a paper password, or another credential.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Sub-card keys live in the device's Secure Enclave/TPM. The master card key lives in an encrypted keyring blob, decryptable only from <code style="background:#f0efe6;padding:1px 5px;border-radius:4px;font-size:13px">passkey + service_secret</code> — neither factor alone suffices. Hardware-key recovery opens a 72-hour cancellation window before releasing the wrapped key.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> every recovery path is equally strong, or that recovery is automatic. Keys that are trivially recoverable are also trivially stealable.</span>
+        </div>
+      </div>
+
+      <!-- A6 -->
+      <div id="a6" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 6</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">Every card is a secure inbox</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">People can reach you through a card without ever learning your email address or phone number. You can filter messages both by which cards they come to and which cards they come from.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Messages are end-to-end encrypted to the card's ML-KEM public key. The outer envelope carries only the recipient card hash; sender identity, message type, and content sit inside the encrypted payload, routed through relays.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> an inbox is unsolicited-message-proof. It means messages carry verified provenance, and reaching you requires holding a card, not knowing a personal identifier.</span>
+        </div>
+      </div>
+
+      <!-- A7 -->
+      <div id="a7" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 7</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">Cards carry accountability as well as trust</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">If someone uses a card to gain access and then behaves badly, the issuing community can be told — even if that person is anonymous to the people they harmed. The report carries proof, not a screenshot. Anonymity isn't impunity.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">A defined process lets reports include proof of the cardholder's actions, signed by their card. If issuers fail to act, third-party trust and safety services focused on defined harm categories can flag the card.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> the issuer learns who the person is. It means the issuer can act on the card they granted.</span>
+        </div>
+      </div>
+
+      <!-- A8 -->
+      <div id="a8" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 8</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">The infrastructure can't watch you</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">The services that make cards work are built so that no single one of them can see what cards you hold or what you do with them. The knowledge is deliberately split apart, so no operator, including us, holds enough to watch you.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Stated per component: wallet services route by recipient hash only; presses verify before posting; relays implement OHTTP and see only device-notification metadata. Data linking cards and messages lives on wallet services; data linking messages and devices lives across independent relays — neither half is sufficient alone.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> nothing is observable. On-chain writes are public events with timestamps and a visible fee payer.</span>
+        </div>
+      </div>
+
+      <!-- A9 -->
+      <div id="a9" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 9</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">You can choose from many infrastructure providers or start your own</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">The protocol is federated. Anyone trusted can run the infrastructure. No company sits in the middle, and no one can buy their way into that position. It's open source, and a community can move to another operator or run their own.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">Presses, relays, wallet services, and notaries are independently operated roles, authorized by cards rather than a central administrator. A governance board maintains the protocol and adjudicates rule violations; it does not own the infrastructure or the data.</p>
+          </div>
+        </div>
+        <div style="background:#f4f9ef;border-left:3px solid #63ae22;border-radius:0 8px 8px 0;padding:14px 18px;margin-top:18px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#1c330f">This does not mean —</span>
+          <span style="font-size:14px;color:#2c3e1c"> there's no trust involved. Federation moves trust from a company to an operator, identified by card so you can see why they're deserving of trust.</span>
+        </div>
+      </div>
+
+      <!-- A10 -->
+      <div id="a10" style="padding:32px 0;border-bottom:1px solid #e7e4da;scroll-margin-top:90px">
+        <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px">
+          <span style="font:700 13px 'Inter',sans-serif;color:#63ae22;white-space:nowrap">Assurance 10</span>
+          <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0;color:#0a2337">Cards are built for the long term</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Plain</span>
+            <p style="font-size:15px;color:#33424a;margin:0">Cards use encryption designed to hold up against future attacks, including attacks by quantum computers that don't exist yet. Sharing a card establishes a channel that can't be intercepted in the middle.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-left:1px solid #e7e4da;padding-left:28px">
+            <span style="font:600 11px 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8a887c">Technical</span>
+            <p style="font-size:14.5px;color:#33424a;margin:0">ML-DSA-44 (FIPS 204) signs IPFS content; ML-KEM-768 (FIPS 203) encrypts card-to-card messages — both post-quantum. secp256r1 via RIP-7212 authorizes on-chain registry writes — classical, by design, with a migration path, since keys are rotatable.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- WHAT WE DO NOT PROMISE -->
+      <div id="not-promise" style="padding:40px 0 0;scroll-margin-top:90px">
+        <h2 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:28px;margin:0 0 20px;color:#0a2337">What we do not promise</h2>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;gap:16px">
+            <span style="font:700 13px 'Inter',sans-serif;color:#8a887c;flex:none;padding-top:2px">01</span>
+            <div><span style="font:700 15px 'Inter',sans-serif;color:#0a2337">Cards cannot build a community for you.</span> <span style="font-size:14.5px;color:#33424a">They give an existing community capabilities it didn't have. They don't create trust, convene people, or resolve conflict — that's organizing.</span></div>
+          </div>
+          <div style="display:flex;gap:16px">
+            <span style="font:700 13px 'Inter',sans-serif;color:#8a887c;flex:none;padding-top:2px">02</span>
+            <div><span style="font:700 15px 'Inter',sans-serif;color:#0a2337">Federation means trusting operators, not trusting no one.</span> <span style="font-size:14.5px;color:#33424a">The protocol makes it visible who you're trusting. It doesn't remove the need to trust.</span></div>
+          </div>
+          <div style="display:flex;gap:16px">
+            <span style="font:700 13px 'Inter',sans-serif;color:#8a887c;flex:none;padding-top:2px">03</span>
+            <div><span style="font:700 15px 'Inter',sans-serif;color:#0a2337">We are not claiming these guarantees are verified today.</span> <span style="font-size:14.5px;color:#33424a">They are design targets, published so we can be tested and held accountable. The protocol is in development.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="background:#0a2337;border-radius:16px;padding:36px 40px;margin-top:48px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+        <div>
+          <h3 style="font-family:'Playpen Sans',cursive;font-weight:700;font-size:24px;margin:0 0 6px;color:#ffffff">Found a hole in one of these?</h3>
+          <p style="font-size:14.5px;color:#aed38e;margin:0">Two open questions are live and real — help us check whether this holds up.</p>
+        </div>
+        <div style="display:flex;gap:12px">
+          <a href="#" style="background:#aed38e;color:#0a2337;font:600 15px 'Inter',sans-serif;padding:13px 24px;border-radius:8px;text-decoration:none">Get involved</a>
+          <a href="#" style="background:transparent;color:#aed38e;font:600 15px 'Inter',sans-serif;padding:13px 24px;border-radius:8px;border:1.5px solid #aed38e;text-decoration:none">GitHub ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
