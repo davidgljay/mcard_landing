@@ -31,8 +31,10 @@ was checked, what was fixed, and what's worth re-checking after future edits.
 - **Motion** — `prefers-reduced-motion: reduce` is honored both globally (CSS)
   and specifically in `card-stack.js` (rotate/snap-back apply instantly,
   skipping the transition, when the user has that preference set).
-- **Touch targets** — nav links, buttons, and checkboxes are sized to ≥44px on
-  the touch axis.
+- **Touch targets** — nav links and buttons are sized to ≥44px on the touch
+  axis. The "which of these are you" checkboxes use a tighter ≥32px row
+  height (still clears the WCAG 2.5.8 AA minimum of 24px) to keep that list
+  visually compact.
 - **Assurances index** — collapses to a horizontally-scrollable chip row under
   900px rather than disappearing; labeled `<nav aria-label="Assurances index">`.
 

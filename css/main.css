@@ -425,7 +425,6 @@ textarea:focus-visible,
   height: 180px;
   object-fit: contain;
   border-radius: 12px;
-  background: var(--tint);
 }
 .step__heading { font: 600 17px var(--font-body); color: var(--navy); }
 .step ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14.5px; color: var(--body-text); }
@@ -469,11 +468,15 @@ textarea:focus-visible,
   height: 72px;
   border-radius: 50%;
   background: var(--green-600);
-  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  font: 700 26px var(--font-display);
+  padding: 14px;
+}
+.honest-statement__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .honest-statement__content { display: flex; flex-direction: column; gap: 12px; flex: 1; }
 .honest-statement__content h2 { font-size: 24px; color: var(--white); }
@@ -551,26 +554,29 @@ textarea:focus-visible,
 }
 .field textarea { resize: vertical; }
 
+.involve-form button[type="submit"] { align-self: flex-start; }
+
 .involve-form__row { display: flex; flex-direction: column; gap: 14px; }
 @media (min-width: 480px) { .involve-form__row { flex-direction: row; } .involve-form__row .field { flex: 1; } }
 
 .involve-form__roles {
-  background: var(--white);
-  border: 1px solid var(--input-border);
-  border-radius: 8px;
-  padding: 14px;
+  border: none;
   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
-.involve-form__roles legend { font: 600 13px var(--font-body); color: var(--navy); padding: 0; }
+.involve-form__roles legend { font: 600 13px var(--font-body); color: var(--navy); padding: 0; margin-bottom: 4px; }
 .involve-form__roles .hint { font-weight: 400; color: var(--muted); }
 .involve-form__roles .checkbox {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 13.5px;
   color: var(--body-text);
-  margin: 10px 16px 0 0;
-  min-height: 44px;
+  margin: 0;
+  min-height: 32px;
 }
 .involve-form__roles input[type="checkbox"] { width: 18px; height: 18px; }
 

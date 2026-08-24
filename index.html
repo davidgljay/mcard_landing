@@ -107,7 +107,9 @@ description: A secure tool for building trust and exchanging resources in commun
 
 <section class="honest-statement">
   <div class="wrap wrap--narrow honest-statement__inner">
-    <span class="honest-statement__avatar" aria-hidden="true">{{ d.honest_statement.photo_initial }}</span>
+    <span class="honest-statement__avatar">
+      <img src="{{ '/img/relationality-lab-mark.png' | relative_url }}" alt="{{ d.honest_statement.photo_alt }}">
+    </span>
     <div class="honest-statement__content">
       <h2>{{ d.honest_statement.heading }}</h2>
       <p>{{ d.honest_statement.body }}</p>
@@ -175,6 +177,16 @@ description: A secure tool for building trust and exchanging resources in commun
         <label for="involve-org">Your community or organization</label>
         <input id="involve-org" name="organization" type="text">
       </div>
+
+      <fieldset class="involve-form__roles">
+        <legend class="visually-hidden">How would you like to be involved?</legend>
+        {% for interest in d.get_involved.form.interests %}
+        <label class="checkbox">
+          <input type="checkbox" name="interest" value="{{ interest }}">
+          {{ interest }}
+        </label>
+        {% endfor %}
+      </fieldset>
 
       <div class="field">
         <label for="involve-why">Why are you interested in learning more? (optional)</label>
