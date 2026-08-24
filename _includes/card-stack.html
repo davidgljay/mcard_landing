@@ -1,0 +1,17 @@
+<div class="card-stack-wrap">
+  <div class="card-stack" id="card-stack" data-card-stack>
+    {% for card in include.cards %}
+    <div class="card-stack__card" data-card-index="{{ forloop.index0 }}"
+         style="--top:{{ card.top }}; --left:{{ card.left }}; --rot:{{ card.rotate }}deg;"
+         tabindex="-1">
+      <img src="{{ card.image | relative_url }}" alt="{{ card.caption }}" draggable="false" loading="eager">
+      <span class="card-stack__caption">{{ card.caption }}</span>
+    </div>
+    {% endfor %}
+  </div>
+  <button type="button" class="card-stack__rotate" data-card-stack-rotate aria-label="Rotate card stack">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+      <path d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0020 13c0-4.42-3.58-8-8-8zm-6 8c0-1.01.25-1.97.7-2.8L5.24 8.74A7.93 7.93 0 004 13c0 4.42 3.58 8 8 8v3l4-4-4-4v3c-3.31 0-6-2.69-6-6z" fill="currentColor"/>
+    </svg>
+  </button>
+</div>

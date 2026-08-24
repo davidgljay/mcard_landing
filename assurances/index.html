@@ -1,0 +1,78 @@
+---
+layout: default
+title: Assurances
+description: What the Membership Card Protocol is built to promise.
+permalink: /assurances/
+---
+{% assign d = site.data.assurances %}
+
+<section class="assurances-intro" id="top">
+  <div class="wrap wrap--narrow">
+    <span class="eyebrow">{{ d.intro.eyebrow }}</span>
+    <h1>{{ d.intro.heading }}</h1>
+    <p>{{ d.intro.body }}</p>
+    <div class="method-note">
+      <span class="method-note__label">{{ d.intro.method_label }}</span>
+      <p>{{ d.intro.method_body }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="assurances-body wrap">
+  <nav class="assurances-index" aria-label="Assurances index">
+    <span class="assurances-index__label">Index</span>
+    {% for item in d.items %}
+    <a href="#{{ item.id }}">{{ item.index_label }} · {{ item.short_label }}</a>
+    {% endfor %}
+    <a href="#not-promise" class="assurances-index__muted">What we don't promise</a>
+  </nav>
+
+  <div class="assurances-list">
+    {% for item in d.items %}
+    <article id="{{ item.id }}" class="assurance" tabindex="-1">
+      <div class="assurance__head">
+        <span class="assurance__number">{{ item.number }}</span>
+        <h2>{{ item.title }}</h2>
+      </div>
+      <div class="assurance__cols">
+        <div class="assurance__col">
+          <span class="col-label">Plain</span>
+          {% for p in item.plain %}<p>{{ p }}</p>{% endfor %}
+        </div>
+        <div class="assurance__col assurance__col--technical">
+          <span class="col-label">Technical</span>
+          {% for t in item.technical %}<p>{{ t }}</p>{% endfor %}
+        </div>
+      </div>
+      {% if item.caveat and item.caveat != "" %}
+      <div class="assurance__caveat">
+        <span>This does not mean —</span> {{ item.caveat }}
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+
+    <section id="not-promise" class="not-promise" tabindex="-1">
+      <h2>{{ d.not_promise.heading }}</h2>
+      <div class="not-promise__list">
+        {% for np in d.not_promise.items %}
+        <div class="not-promise__item">
+          <span class="not-promise__number" aria-hidden="true">{{ np.number }}</span>
+          <div><span class="not-promise__title">{{ np.title }}</span> <span class="not-promise__body">{{ np.body }}</span></div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <div class="assurances-cta">
+      <div>
+        <h3>{{ d.cta.heading }}</h3>
+        <p>{{ d.cta.body }}</p>
+      </div>
+      <div class="assurances-cta__buttons">
+        <a href="{{ d.cta.primary_url | relative_url }}" class="btn btn--accent">{{ d.cta.primary_label }}</a>
+        <a href="{{ site.github_url }}" class="btn btn--outline btn--dark" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>

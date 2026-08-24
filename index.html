@@ -1,0 +1,187 @@
+---
+layout: default
+title: Home
+description: A secure tool for building trust and exchanging resources in community.
+---
+{% assign d = site.data.home %}
+
+<section class="hero" id="top">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <h1 class="hero__headline">{{ d.hero.headline }}</h1>
+      <p class="hero__subhead">{{ d.hero.subhead }}</p>
+      <div class="hero__ctas">
+        <span class="btn btn--disabled">
+          {{ d.hero.cta_primary.label }}
+          <span class="badge">{{ d.hero.cta_primary.badge }}</span>
+        </span>
+        <a href="{{ d.hero.cta_secondary.url | relative_url }}" class="btn btn--outline">{{ d.hero.cta_secondary.label }}</a>
+        <a href="{{ d.hero.cta_tertiary.url | relative_url }}" class="btn btn--accent">{{ d.hero.cta_tertiary.label }}</a>
+      </div>
+    </div>
+    <div class="hero__cards">
+      {% include card-stack.html cards=d.hero.cards %}
+    </div>
+  </div>
+</section>
+
+<section class="qualifying-moment">
+  <div class="wrap wrap--narrow">
+    <h2>{{ d.qualifying_moment.heading }}</h2>
+    <p>{{ d.qualifying_moment.body }}</p>
+  </div>
+</section>
+
+<section class="pillar">
+  <div class="wrap wrap--narrow">
+    <h2>{{ d.pillar_1.heading }}</h2>
+    <ul class="bullet-list">
+      {% for b in d.pillar_1.bullets %}
+      <li{% if b.highlight %} class="bullet-list__highlight"{% endif %}>{{ b.text }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3 class="pillar__examples-heading">{{ d.pillar_1.examples_heading }}</h3>
+    <div class="examples-grid">
+      {% for ex in d.pillar_1.examples %}
+      <div class="examples-grid__item">
+        <img src="{{ ex.icon | relative_url }}" alt="" loading="lazy">
+        <span>{{ ex.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="pillar__closing">{{ d.pillar_1.closing_line }}</p>
+  </div>
+</section>
+
+<section class="pillar pillar--tinted">
+  <div class="wrap wrap--narrow">
+    <h2>{{ d.pillar_2.heading }}</h2>
+    <ul class="bullet-list">
+      {% for b in d.pillar_2.bullets %}
+      <li>{{ b }}</li>
+      {% endfor %}
+    </ul>
+    <div class="callout">{{ d.pillar_2.callout }}</div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="wrap wrap--narrow how-it-works__intro">
+    <h2>{{ d.how_it_works.heading }}</h2>
+    <p>{{ d.how_it_works.intro }}</p>
+  </div>
+  <div class="wrap how-it-works__grid">
+    {% for step in d.how_it_works.steps %}
+    <div class="step">
+      <span class="step__label">{{ step.label }}</span>
+      <img src="{{ step.image | relative_url }}" alt="" loading="lazy" class="step__image">
+      <span class="step__heading">{{ step.heading }}</span>
+      <ul>
+        {% for b in step.bullets %}
+        <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="supporting-messages">
+  <div class="wrap">
+    <div class="supporting-messages__grid">
+      {% for card in d.supporting_messages.cards %}
+      <div class="supporting-messages__card">
+        <span class="supporting-messages__heading">{{ card.heading }}</span>
+        <ul>
+          {% for b in card.bullets %}
+          <li>{{ b }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="supporting-messages__closing">{{ d.supporting_messages.closing_text }} <a href="{{ d.supporting_messages.closing_link_url | relative_url }}">{{ d.supporting_messages.closing_link_label }}</a>.</p>
+  </div>
+</section>
+
+<section class="honest-statement">
+  <div class="wrap wrap--narrow honest-statement__inner">
+    <span class="honest-statement__avatar" aria-hidden="true">{{ d.honest_statement.photo_initial }}</span>
+    <div class="honest-statement__content">
+      <h2>{{ d.honest_statement.heading }}</h2>
+      <p>{{ d.honest_statement.body }}</p>
+      <span class="honest-statement__status-label">{{ d.honest_statement.status_label }}</span>
+      <ul class="status-list">
+        {% for item in d.honest_statement.status_items %}
+        <li class="{% if item.done %}status-list__done{% else %}status-list__pending{% endif %}">
+          <span class="status-list__dot" aria-hidden="true">{% if item.done %}✓{% endif %}</span>
+          {{ item.text }}
+          <span class="visually-hidden">{% if item.done %} — done{% else %} — not yet done{% endif %}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="get-involved" id="get-involved">
+  <div class="wrap">
+    <h2>{{ d.get_involved.heading }}</h2>
+    <p class="get-involved__intro">{{ d.get_involved.intro }}</p>
+    <div class="audience-grid">
+      {% for a in d.get_involved.audiences %}
+      <div class="audience-card">
+        <span class="audience-card__heading">{{ a.heading }}</span>
+        <span class="audience-card__body">{{ a.body }}</span>
+        {% if a.detail and a.detail != "" %}<span class="audience-card__detail">{{ a.detail }}</span>{% endif %}
+        {% if a.tags %}
+        <div class="audience-card__tags">
+          {% for tag in a.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <form class="involve-form" action="#" method="post">
+      <h3>{{ d.get_involved.form.heading }}</h3>
+      <p class="involve-form__intro">{{ d.get_involved.form.intro }}</p>
+
+      <div class="involve-form__row">
+        <div class="field">
+          <label for="involve-name">Name</label>
+          <input id="involve-name" name="name" type="text" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="involve-email">Email</label>
+          <input id="involve-email" name="email" type="email" autocomplete="email">
+        </div>
+      </div>
+
+      <fieldset class="involve-form__roles">
+        <legend>{{ d.get_involved.form.role_question }} <span class="hint">{{ d.get_involved.form.role_hint }}</span></legend>
+        {% for role in d.get_involved.form.roles %}
+        <label class="checkbox">
+          <input type="checkbox" name="role" value="{{ role }}">
+          {{ role }}
+        </label>
+        {% endfor %}
+      </fieldset>
+
+      <div class="field">
+        <label for="involve-org">Your community or organization</label>
+        <input id="involve-org" name="organization" type="text">
+      </div>
+
+      <div class="field">
+        <label for="involve-why">Why are you interested in learning more? (optional)</label>
+        <textarea id="involve-why" name="why" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--accent">{{ d.get_involved.form.submit_label }}</button>
+    </form>
+  </div>
+</section>

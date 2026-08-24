@@ -1,0 +1,187 @@
+hero:
+  headline: "Let your community create places for itself, anywhere on the internet"
+  subhead: "A calendar anyone can post to. A list of free stuff going spare. A members-only game server. A lending library. A board for asking for help and offering it."
+  cta_primary:
+    label: "Try It Out"
+    badge: "Coming soon"
+  cta_secondary:
+    label: "Read the Assurances"
+    url: "/assurances/"
+  cta_tertiary:
+    label: "Get Involved"
+    url: "/#get-involved"
+  # top/left are percentages of a square 456x456 reference frame (matches
+  # the original design's card sizing); card-stack.js cycles which preset
+  # each card uses when the rotate control is triggered.
+  cards:
+    - image: /img/card-1.jpg
+      caption: "Forest Park Salsa Society"
+      top: 18.42
+      left: 21.05
+      rotate: -10
+    - image: /img/card-2.jpg
+      caption: "Portland LGBT Center Youth Group"
+      top: 9.21
+      left: 32.89
+      rotate: 6
+    - image: /img/card-3.webp
+      caption: "East Springfield Mutual Aid"
+      top: 27.63
+      left: 39.47
+      rotate: -3
+    - image: /img/card-4.jpg
+      caption: "PRAISE Gospel Choir"
+      top: 0
+      left: 46.05
+      rotate: 11
+    - image: /img/card-5.jpg
+      caption: "Tech Workers for Climate Action"
+      top: 43.42
+      left: 30.26
+      rotate: -16
+
+qualifying_moment:
+  heading: "This is for communities that already exist"
+  body: "A club that meets, a network that gathers, a group with a channel and regulars who know each other. If you've already built the trust, cards give it somewhere to go."
+
+pillar_1:
+  heading: "Your community can create shared resources anywhere on the internet"
+  bullets:
+    - text: "Give every member a card. Anything your community makes can check it."
+    - text: "No accounts, no passwords, no membership database to maintain."
+    - text: "Anyone in the community can set something up, not just you. The calendar doesn't have to be your job."
+      highlight: true
+    - text: "It works anywhere on the internet, not inside one app."
+  examples_heading: "With membership cards, you can have..."
+  examples:
+    - icon: /img/icon-calendar.png
+      label: "A calendar anyone can post to"
+    - icon: /img/icon-checklist.png
+      label: "Private docs and project management"
+    - icon: /img/icon-pickaxe.png
+      label: "A members-only Minecraft server"
+    - icon: /img/icon-ballotbox.png
+      label: "A voting system"
+    - icon: /img/icon-car.png
+      label: "A community ridesharing board"
+    - icon: /img/icon-folder.png
+      label: "A secure community filestore"
+    - icon: /img/icon-hammer.png
+      label: "A community skillshare directory"
+    - icon: /img/icon-clothes.png
+      label: "Free stuff board"
+  closing_line: "....without having to do it all on one platform."
+
+pillar_2:
+  heading: "Your members can prove their affiliation to others"
+  bullets:
+    - "A card proves your members belong, to anyone, anywhere — and reveals nothing else about them."
+    - "Members can show affiliation when they need to be taken seriously: reaching out to an institution, joining an adjacent community, asking for resources."
+    - "Anyone can check a card and see who vouched for it and why — following the chain back to something they already trust."
+    - "Your members choose what to show and when. The cards someone holds aren't connected to each other."
+  callout: "We can't see who holds your community's cards or what they do with them. That isn't a promise we make — it's a thing the system can't do."
+
+how_it_works:
+  heading: "How It Works"
+  intro: "Every card carries a chain of verification. When someone shows you a card, you can see who issued it, why, and why the issuer is who they say they are."
+  steps:
+    - label: "Step 1"
+      image: /img/step1-handoff.png
+      heading: "Issue cards to members of your community"
+      bullets:
+        - "Placeholder bullet point."
+        - "Placeholder bullet point."
+    - label: "Step 2"
+      image: /img/step2-car.png
+      heading: "Set up open source tools that use cards to grant entry"
+      bullets:
+        - "Placeholder bullet point."
+        - "Placeholder bullet point."
+    - label: "Step 3"
+      image: /img/step3-tap.png
+      heading: "Members present their cards to access resources or prove their affiliation to others"
+      bullets:
+        - "Placeholder bullet point."
+        - "Placeholder bullet point."
+
+supporting_messages:
+  cards:
+    - heading: "No one has to move to a new platform"
+      bullets:
+        - "Your group chat, calendar, or channel stays exactly where it is."
+        - "Cards layer on top of what your community already uses."
+    - heading: "You can update or revoke cards whenever you like"
+      bullets:
+        - "A card reflects current standing, not past standing."
+        - "Revocation is authoritative — it can't be hidden from a verifier who checks."
+    - heading: "Your community's data will remain private and secure"
+      bullets:
+        - "No single operator can see who holds a card or what they do with it."
+        - "The data belongs to your community, not to us."
+  closing_text: "Want to learn more? Read the"
+  closing_link_label: "list of assurances that members' cards offer"
+  closing_link_url: "/assurances/"
+
+honest_statement:
+  heading: "Care about community? We'd love your help."
+  photo_initial: "D"
+  photo_alt: "David, founder of the Membership Card Protocol"
+  body: "The membership card protocol has been an open source labor of love for Relationality Lab and the community surrounding it. We have outlined the protocol and deployed the infrastructure to make it a reality. But it still needs to undergo rigorous third party auditing and we still need communities to test it with. We are holding off on building the front-end infrastructure that people will use to manage their cards until we have a set of community partners to build with."
+  status_label: "Status of the Membership Card Protocol"
+  status_items:
+    - text: "Design of core protocol"
+      done: true
+    - text: "Partial review by cybersecurity professionals"
+      done: true
+    - text: "System for storing cards without a centralized database"
+      done: true
+    - text: "System for associating cards with domain names, so it's easy to see which group cards come from"
+      done: true
+    - text: "System of \"presses\" for easily creating and updating cards"
+      done: true
+    - text: "Zero-knowledge backups of cards in case a device is lost"
+      done: true
+    - text: "Card verification plug-in that can be added to any website or application"
+      done: true
+    - text: "Cards to send and receive messages, so that people can share a card without also sharing an email or phone #"
+      done: true
+    - text: "Chat rooms that require cards for entry and kick members out if cards are revoked"
+      done: true
+    - text: "\"Relay\" system to keep cardholder activity obfuscated from the people who run card infrastructure"
+      done: true
+    - text: "SDKs for building web and mobile applications that use cards"
+      done: true
+    - text: "Partnerships with real-world communities"
+      done: false
+    - text: "Frontend application for creating, updating, and managing cards"
+      done: false
+    - text: "Thorough review by cybersecurity and trust and safety professionals"
+      done: false
+    - text: "Integration with an ecosystem of community applications"
+      done: false
+
+get_involved:
+  heading: "Get involved"
+  intro: "We're excited to partner with people with the following backgrounds:"
+  audiences:
+    - heading: "Community organizers"
+      body: "People building communities where people regularly gather, connect, and support one another."
+      detail: "Looking for partners who can test the protocol, give feedback, and potentially take part in its governance."
+    - heading: "Cybersecurity and trust & safety professionals"
+      body: "People who can review the protocol and check whether it lives up to its assurances."
+      detail: ""
+      tags:
+        - "Open question: ML-KEM-768 encapsulation"
+    - heading: "People building community applications"
+      body: "Developers, technologists, anyone who can put together a working thing with AI coding tools."
+      detail: "Build the places communities reach with their cards — calendars, directories, boards, games."
+  form:
+    heading: "Start a conversation"
+    intro: "An occasional email, and a real conversation if there's mutual interest."
+    role_question: "Which of these are you?"
+    role_hint: "check all that apply"
+    roles:
+      - "Organizer"
+      - "Security / T&S"
+      - "Builder"
+    submit_label: "Start a conversation"

@@ -1,0 +1,19 @@
+title: Membership Card Protocol
+tagline: A project of Relationality Lab
+description: >
+  A secure tool for building trust and exchanging resources in community.
+url: ""
+baseurl: ""
+
+github_url: https://github.com/davidgljay/membership_card_protocol
+relationality_lab_url: https://relationalitylab.org
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - design/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules/
