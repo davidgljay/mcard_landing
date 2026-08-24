@@ -1,6 +1,6 @@
 hero:
-  headline: "Let your community create places for itself, anywhere on the internet"
-  subhead: "A calendar anyone can post to. A list of free stuff going spare. A members-only game server. A lending library. A board for asking for help and offering it."
+  headline: "<p>Let anyone from your community</p><p>Create places for your community</p><p>Anywhere on the internet</p>"
+  subhead: "<b>The Membership Card Protocol</b> is a secure way for communities to share resources and build trust.<br>It lets non-technical community leaders hand out digital cards that can be used to prove membership and access resources."
   cta_primary:
     label: "Try It Out"
     badge: "Coming soon"
@@ -15,22 +15,22 @@ hero:
   # each card uses when the rotate control is triggered.
   cards:
     - image: /img/card-1.jpg
-      caption: "Forest Park Salsa Society"
+      caption: "Waterfront Salsa Society"
       top: 18.42
       left: 21.05
       rotate: -10
     - image: /img/card-2.jpg
-      caption: "Portland LGBT Center Youth Group"
+      caption: "LGBT Center Youth Group"
       top: 9.21
       left: 32.89
       rotate: 6
     - image: /img/card-3.webp
-      caption: "East Springfield Mutual Aid"
+      caption: "Neighborhood Mutual Aid Network"
       top: 27.63
       left: 39.47
       rotate: -3
     - image: /img/card-4.jpg
-      caption: "PRAISE Gospel Choir"
+      caption: "Gospel Choir"
       top: 0
       left: 46.05
       rotate: 11
@@ -41,17 +41,19 @@ hero:
       rotate: -16
 
 qualifying_moment:
-  heading: "This is for communities that already exist"
-  body: "A club that meets, a network that gathers, a group with a channel and regulars who know each other. If you've already built the trust, cards give it somewhere to go."
+  heading: "Built By and For People Who Create Community"
+  body: "<p>The Membership Card Protocol is a project of <a href='https://relationalitylab.org'>Relationality Lab</a>, an organization working to help people who create community earn a living wage. It is an open source, grassroots project designed to make open source technologies accessible to community builders without deep technical expertise.</p><p>While this is currently a small passion project, we hope it can one day be governed by a coalition of open source contributors and community stewards.</p>"
 
 pillar_1:
-  heading: "Your community can create shared resources anywhere on the internet"
+  heading: "Easily create shared resources anywhere on the internet"
   bullets:
     - text: "Give every member a card. Anything your community makes can check it."
-    - text: "No accounts, no passwords, no membership database to maintain."
-    - text: "Anyone in the community can set something up, not just you. The calendar doesn't have to be your job."
+    - text: "No accounts, no passwords, no complex API integrations, no single sign on, no central membership database."
+    - text: "Free to use and open source."
+    - text: "Anyone in the community can set something up, not just you. The community calendar doesn't have to be your job."
       highlight: true
-    - text: "It works anywhere on the internet, not inside one app."
+    - text: "Works across the internet, not inside one platform."
+    - text: "Private and secure by default."
   examples_heading: "With membership cards, you can have..."
   examples:
     - icon: /img/icon-calendar.png
@@ -69,55 +71,62 @@ pillar_1:
     - icon: /img/icon-hammer.png
       label: "A community skillshare directory"
     - icon: /img/icon-clothes.png
-      label: "Free stuff board"
+      label: "A free stuff board"
   closing_line: "....without having to do it all on one platform."
 
 pillar_2:
-  heading: "Your members can prove their affiliation to others"
+  heading: "Securely build trust across communities"
   bullets:
-    - "A card proves your members belong, to anyone, anywhere — and reveals nothing else about them."
-    - "Members can show affiliation when they need to be taken seriously: reaching out to an institution, joining an adjacent community, asking for resources."
-    - "Anyone can check a card and see who vouched for it and why — following the chain back to something they already trust."
-    - "Your members choose what to show and when. The cards someone holds aren't connected to each other."
-  callout: "We can't see who holds your community's cards or what they do with them. That isn't a promise we make — it's a thing the system can't do."
+    - "Your members can show cards to others to prove their affiliation. For example, someone from Dallas Street Medics could reach out to someone from Austin Mutual Aid and attach their card to prove that they are worthy of trust."
+    - "Cards can be updated, annotated and revoked, so showing a card demonstrates that someone is a member in good standing."
+    - "In most cases, revealing a card reveals nothing else about you. A card could prove that someone is, say, a licensed physician but reveal nothing else about them."
+    - "Cards can be used to send secure messages and create invite-only chatrooms. For example, an employee of an LGBT center could easily create a chatroom that only employees from other LGBT centers in the region can enter."
+  callout: "The protocol is built so we can't see what cards you hold or how you're using them. Want even stronger privacy? You can run your own backend card infrastructure as part of a decentralized network."
 
 how_it_works:
   heading: "How It Works"
-  intro: "Every card carries a chain of verification. When someone shows you a card, you can see who issued it, why, and why the issuer is who they say they are."
+  intro: ""
   steps:
     - label: "Step 1"
       image: /img/step1-handoff.png
       heading: "Issue cards to members of your community"
       bullets:
-        - "Placeholder bullet point."
-        - "Placeholder bullet point."
+        - "Verify that you own your community's domain name (or verify some other way)."
+        - "Design your card and decide what to call it."
+        - "Create a link that lets your members claim a card."
+        - "When they click the link, they'll be able to add the card to a virtual wallet."
+        - "If you like, you can create different cards for different roles in your community."
     - label: "Step 2"
       image: /img/step2-car.png
       heading: "Set up open source tools that use cards to grant entry"
       bullets:
-        - "Placeholder bullet point."
-        - "Placeholder bullet point."
+        - "Select from a menu of open source tools that might be helpful to your community. (Most of these are still being built.)"
+        - "Tell the tools to accept cards from your community."
+        - "Invite members of your community to come check it out."
+        - "Like to vibe code or have a community member who does? Building your own tools and integrating cards is easy."
     - label: "Step 3"
       image: /img/step3-tap.png
       heading: "Members present their cards to access resources or prove their affiliation to others"
       bullets:
-        - "Placeholder bullet point."
-        - "Placeholder bullet point."
+        - "When a member clicks on a community resource it will bring up their card wallet. They'll drag the appropriate card from their wallet to the service to gain entry."
+        - "They can also attach their cards to private messages, create chatrooms for people with specific cards, and (soon) attach cards to Bluesky messages to prove their affiliation."
 
 supporting_messages:
   cards:
     - heading: "No one has to move to a new platform"
       bullets:
-        - "Your group chat, calendar, or channel stays exactly where it is."
-        - "Cards layer on top of what your community already uses."
+        - "If people like your current WhatsApp, Discord or Slack they can stay exactly where they are."
+        - "Cards unlock new capabilities without disturbing what already works."
     - heading: "You can update or revoke cards whenever you like"
       bullets:
-        - "A card reflects current standing, not past standing."
-        - "Revocation is authoritative — it can't be hidden from a verifier who checks."
-    - heading: "Your community's data will remain private and secure"
+        - "A card reflects a member's current standing."
+        - "You can update cards to reflect a member's accomplishments, letting others know that they are deserving of trust."
+        - "If you choose to revoke you can say why. Someone's cards being compromised looks different than someone being kicked out for causing harm."
+    - heading: "Your community's card data will remain private and secure"
       bullets:
         - "No single operator can see who holds a card or what they do with it."
         - "The data belongs to your community, not to us."
+        - "With consent, you can see how people are using their cards to understand the life of your community."
   closing_text: "Want to learn more? Read the"
   closing_link_label: "list of assurances that members' cards offer"
   closing_link_url: "/assurances/"
@@ -126,7 +135,7 @@ honest_statement:
   heading: "Care about community? We'd love your help."
   photo_initial: "D"
   photo_alt: "David, founder of the Membership Card Protocol"
-  body: "The membership card protocol has been an open source labor of love for Relationality Lab and the community surrounding it. We have outlined the protocol and deployed the infrastructure to make it a reality. But it still needs to undergo rigorous third party auditing and we still need communities to test it with. We are holding off on building the front-end infrastructure that people will use to manage their cards until we have a set of community partners to build with."
+  body: "The membership card protocol has been an open source labor of love for Relationality Lab and the community surrounding it. We have outlined the protocol and deployed the infrastructure to make it a reality, but it still needs to undergo rigorous third party auditing and we still need community partners with which to test it. We are holding off on building the front-end application that people will use to manage their cards until we have these community partnerships in place."
   status_label: "Status of the Membership Card Protocol"
   status_items:
     - text: "Design of core protocol"
@@ -143,7 +152,7 @@ honest_statement:
       done: true
     - text: "Card verification plug-in that can be added to any website or application"
       done: true
-    - text: "Cards to send and receive messages, so that people can share a card without also sharing an email or phone #"
+    - text: "Cards can send and receive messages, so that people can share a card without also sharing an email or phone #"
       done: true
     - text: "Chat rooms that require cards for entry and kick members out if cards are revoked"
       done: true
@@ -168,7 +177,7 @@ get_involved:
       body: "People building communities where people regularly gather, connect, and support one another."
       detail: "Looking for partners who can test the protocol, give feedback, and potentially take part in its governance."
     - heading: "Cybersecurity and trust & safety professionals"
-      body: "People who can review the protocol and check whether it lives up to its assurances."
+      body: "People who can review the protocol and check whether it lives up to its <a href=\"/assurances/\">assurances</a>."
       detail: ""
       tags:
         - "Open question: ML-KEM-768 encapsulation"
@@ -176,12 +185,15 @@ get_involved:
       body: "Developers, technologists, anyone who can put together a working thing with AI coding tools."
       detail: "Build the places communities reach with their cards — calendars, directories, boards, games."
   form:
-    heading: "Start a conversation"
+    heading: "Learn More & Get In Touch"
     intro: "An occasional email, and a real conversation if there's mutual interest."
     role_question: "Which of these are you?"
     role_hint: "check all that apply"
     roles:
-      - "Organizer"
-      - "Security / T&S"
-      - "Builder"
-    submit_label: "Start a conversation"
+      - "Community Organizer"
+      - "Cybersecurity Expert"
+      - "Trust & Safety Professional"
+      - "Application Builder"
+      - "Community Funder"
+      - "Academic Researcher"
+    submit_label: "Reach out, we'll be in touch"

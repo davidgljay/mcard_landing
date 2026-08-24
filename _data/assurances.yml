@@ -1,9 +1,9 @@
 intro:
-  eyebrow: "The assurances"
-  heading: "What the protocol is built to promise"
-  body: "These are design guarantees: what the Membership Card Protocol is built to promise. They are stated plainly, in public, so that they can be tested against the implementation and audited by people who know how to break things."
+  eyebrow: "The Assurances"
+  heading: "The Membership Card Protocol is built on these promises"
+  body: "These are design guarantees: what the Membership Card Protocol is built to promise. We state them here so that they can be tested against the implementation and audited by people who know how to break things."
   method_label: "Method — what this list is, and is not"
-  method_body: "What this list is: what the protocol is designed to guarantee and is being audited against. What it is not: a claim that each guarantee has been independently verified today."
+  method_body: "What this list is: what the protocol is designed to guarantee and is being audited against. What it is not: a claim that each guarantee has been independently verified today. We've tried our best, and know that a more thorough review is needed."
 
 items:
   - id: a0
@@ -47,7 +47,7 @@ items:
     number: "Assurance 3"
     title: "A card says why you're trustworthy and nothing else"
     plain:
-      - "A card proves one thing — that you're a member of a community, a licensed practitioner, a student — without revealing anything else about you. They allow you to be both anonymous and verified."
+      - "A card proves one thing — that you're a member of a community, a licensed practitioner, a student — without revealing anything else about you. It allows you to be both anonymous and verified."
     technical:
       - "A card asserts the statement defined by its issuing policy. Personally identifying fields appear only where the policy specifies them, and the holder must countersign at issuance for the card to be valid."
     caveat: "a card is contentless. Presenting a card reveals the card's statement and its issuance chain."
@@ -61,7 +61,7 @@ items:
       - "The cards you hold are not connected. You can show a professional credential in one place and a fan club card in another, with no way to tell they belong to the same person unless you present them together."
     technical:
       - "Each card has its own keypair, registry address (derived one-way from its public key), and content key. There is no shared identifier across a holder's cards, and no directory that enumerates them."
-    caveat: "behavioural correlation is impossible. It means the protocol itself provides no linkage."
+    caveat: "behavioral correlation is impossible. It means the protocol itself provides no linkage."
 
   - id: a5
     index_label: "A5"
