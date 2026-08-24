@@ -81,7 +81,7 @@ pillar_2:
     - "Cards can be updated, annotated and revoked, so showing a card demonstrates that someone is a member in good standing."
     - "In most cases, revealing a card reveals nothing else about you. A card could prove that someone is, say, a licensed physician but reveal nothing else about them."
     - "Cards can be used to send secure messages and create invite-only chatrooms. For example, an employee of an LGBT center could easily create a chatroom that only employees from other LGBT centers in the region can enter."
-  callout: "The protocol is built so we can't see what cards you hold or how you're using them. Want even stronger privacy? You can run your own backend card infrastructure as part of a decentralized network."
+  callout: "We believe that real change often starts in small conversations with people you can trust."
 
 how_it_works:
   heading: "How It Works"
@@ -121,20 +121,17 @@ supporting_messages:
       bullets:
         - "A card reflects a member's current standing."
         - "You can update cards to reflect a member's accomplishments, letting others know that they are deserving of trust."
-        - "If you choose to revoke you can say why. Someone's cards being compromised looks different than someone being kicked out for causing harm."
     - heading: "Your community's card data will remain private and secure"
       bullets:
         - "No single operator can see who holds a card or what they do with it."
         - "The data belongs to your community, not to us."
-        - "With consent, you can see how people are using their cards to understand the life of your community."
   closing_text: "Want to learn more? Read the"
-  closing_link_label: "list of assurances that members' cards offer"
+  closing_link_label: "list of assurances that membership cards offer"
   closing_link_url: "/assurances/"
 
 honest_statement:
   heading: "Care about community? We'd love your help."
-  photo_initial: "D"
-  photo_alt: "David, founder of the Membership Card Protocol"
+  photo_alt: "Relationality Lab"
   body: "The membership card protocol has been an open source labor of love for Relationality Lab and the community surrounding it. We have outlined the protocol and deployed the infrastructure to make it a reality, but it still needs to undergo rigorous third party auditing and we still need community partners with which to test it. We are holding off on building the front-end application that people will use to manage their cards until we have these community partnerships in place."
   status_label: "Status of the Membership Card Protocol"
   status_items:
@@ -196,4 +193,8 @@ get_involved:
       - "Application Builder"
       - "Community Funder"
       - "Academic Researcher"
+    interests:
+      - "I would like to stay updated as the protocol progresses"
+      - "I would like to explore community partnership"
+      - "I am interested in getting involved"
     submit_label: "Reach out, we'll be in touch"
