@@ -40,17 +40,35 @@
     card.style.transition = prev;
   }
 
+  function jitter(amount) {
+    return (Math.random() * 2 - 1) * amount;
+  }
+
+  // Nudges a base slot by a small random amount each time it's used, so the
+  // whole stack visibly reshuffles on every click instead of snapping back
+  // to identical coordinates.
+  function jitteredSlot(base, posAmount, rotAmount) {
+    return {
+      top: base.top + jitter(posAmount),
+      left: base.left + jitter(posAmount),
+      rot: base.rot + jitter(rotAmount),
+      scale: base.scale
+    };
+  }
+
   // Repaints every card's slot + z-index from the current zOrder. The last
   // entry (top of the stack) gets FRONT_SLOT; everyone else gets a BACK_SLOT
-  // based on their position in the stack, which is what makes the rest of
-  // the deck visibly reshuffle each time.
+  // based on their position in the stack. Both get a little per-click jitter
+  // so the deck visibly reshuffles rather than cycling through identical
+  // fixed positions.
   function render(options) {
     var instant = options && options.instant;
 
     zOrder.forEach(function (cardIndex, position) {
       var card = cards[cardIndex];
       var isTop = position === zOrder.length - 1;
-      var slot = isTop ? FRONT_SLOT : BACK_SLOTS[position % BACK_SLOTS.length];
+      var base = isTop ? FRONT_SLOT : BACK_SLOTS[position % BACK_SLOTS.length];
+      var slot = isTop ? jitteredSlot(base, 1.5, 3) : jitteredSlot(base, 4, 6);
       card.style.setProperty('--z', position + 1);
 
       if (instant || reduceMotionQuery.matches) {
