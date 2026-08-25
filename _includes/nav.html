@@ -3,7 +3,12 @@
     <a class="site-nav__eyebrow" href="{{ site.relationality_lab_url }}" target="_blank" rel="noopener">A project of Relationality Lab</a>
     <div class="site-nav__row">
       <a class="site-nav__title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <nav class="site-nav__links" aria-label="Primary">
+      <button type="button" class="site-nav__toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav id="site-nav-links" class="site-nav__links" aria-label="Primary">
         <a href="{{ '/' | relative_url }}#top" class="{% if page.url == '/' %}is-active{% endif %}">Home</a>
         <a href="{{ '/assurances/' | relative_url }}" class="{% if page.url contains '/assurances' %}is-active{% endif %}">Assurances</a>
         <a href="{{ '/' | relative_url }}#get-involved">Get involved</a>

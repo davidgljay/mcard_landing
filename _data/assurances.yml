@@ -15,9 +15,9 @@ items:
       - "A card lets you prove a statement about yourself and lets online services act on it. Show your card and a claim comes with it — this person is a member of the running club — along with proof it was really issued to you."
       - "Two uses: verify a statement attached to a message, or gain access by presenting your card to a service that checks it."
     technical:
-      - "Proof is a signature pointing to a document on IPFS. The verifier checks the signature, derives the on-chain registry address (keccak256(pubkey)), reads the registry entry, fetches and decrypts the referenced document, then walks the chain to a trusted root."
-      - "Verification is a library, not a service — no API key, no permission, no call home."
-    caveat: "verification is free of dependencies. A verifier needs network access to the registry and IPFS."
+      - "A card is an attestation that is cryptographically signed by both an issuer and a receiver. By checking the issuer's card and their issuer's card, a verifier can confirm that a card traces back to some trusted root. Signatures are implemented through ML-DSA-44 to be quantum resistant. Cards are stored on IPFS so that storage is decentralized. A smart contract on Arbitrum One points to the latest card documents on IPFS, allowing cards to be updated and revoked. A cards address is derivable from its public key."
+      - "Verification is a library, not a centralized service."
+    caveat: "verification is free of dependencies. A verifier needs network access to the smart contract and IPFS."
 
   - id: a1
     index_label: "A1"
@@ -27,7 +27,7 @@ items:
     plain:
       - "Every card carries a chain of verification. When someone shows you a card, you can see who issued it, why it was issued, and why the issuer is who they say they are — following the chain back to a root you already trust."
     technical:
-      - "Each card document references an issuer, an issuing policy, and its ancestry. A verifier walks the chain from the presented card to a trusted root, checking signature validity and issuer authorization at each link."
+      - "Each card document references an issuer, an issuing policy, and their respective ancestry. The policy limits what kind of card can be created and who can issue it. An issuer activates a policy to create a card. (e.g. a school superintendent makes a 'student card' policy and a school administrator creates cards with that policy.) A verifier walks the chain from the presented card through both the policy and the issuer to a trusted root, checking signature validity and issuer authorization at each link."
     caveat: "the chain tells you a person is trustworthy. It tells you who vouched for what, and lets you decide whether you trust them."
 
   - id: a2
@@ -38,18 +38,18 @@ items:
     plain:
       - "Cards can be updated and revoked. If someone's standing changes, the issuer (or someone else authorized) can update or revoke it. A card you're shown tells you where things stand now — not when it was issued."
     technical:
-      - "Cards include an append-only log of updates, some benign (key rotation), others revocations (codes 800–999), registered on a smart contract on Arbitrum One. A press posts the latest version to IPFS and updates the contract to point to it."
+      - "Cards include an append-only log of updates, some benign (key rotation), some positive (a promotion) and some revocations. To make an update, a service called a 'press' posts an update to IPFS and updates the smart contract to point to the new version. Because all updates must include valid signatures, a press cannot post a fake update without being quickly detected and reprimanded."
     caveat: "revocation propagates instantly everywhere. It means revocation is authoritative and cannot be hidden from a verifier who checks."
 
   - id: a3
     index_label: "A3"
-    short_label: "Nothing else"
+    short_label: "Anonymous but Verified"
     number: "Assurance 3"
-    title: "A card says why you're trustworthy and nothing else"
+    title: "A card says why you're verified and nothing else"
     plain:
       - "A card proves one thing — that you're a member of a community, a licensed practitioner, a student — without revealing anything else about you. It allows you to be both anonymous and verified."
     technical:
-      - "A card asserts the statement defined by its issuing policy. Personally identifying fields appear only where the policy specifies them, and the holder must countersign at issuance for the card to be valid."
+      - "A card asserts only the statement defined by its issuing policy. By default, they do not include names, email addresses, or any other identifier that can be used to identify or track the cardholder, though card issuers could choose to add this information. Cardholders can also strip away personal information using a notary service, which produces a card attesting that the holder has another card of a given type. For example, someone could use a notary service to create an anonymous 'Meta Employee' card even if Meta does not grant them one."
     caveat: "a card is contentless. Presenting a card reveals the card's statement and its issuance chain."
 
   - id: a4
@@ -71,7 +71,7 @@ items:
     plain:
       - "Your cards live on your device, and you can get them back if it's lost, stolen, or replaced. Recovery doesn't depend on any single service staying in business. You choose how strong to make it: a hardware key, a paper password, or another credential."
     technical:
-      - "Sub-card keys live in the device's Secure Enclave/TPM. The master card key lives in an encrypted keyring blob, decryptable only from passkey + service_secret — neither factor alone suffices. Hardware-key recovery opens a 72-hour cancellation window before releasing the wrapped key."
+      - "The private keys tied to cards live on device and are backed up in an encrypted keyring blob. The blob is decryptable only from a passkey stored in Apple, Google, or a password manager. This recovery mechanism can be switched based on a user's preference."
     caveat: "every recovery path is equally strong, or that recovery is automatic. Keys that are trivially recoverable are also trivially stealable."
 
   - id: a6
@@ -82,7 +82,7 @@ items:
     plain:
       - "People can reach you through a card without ever learning your email address or phone number. You can filter messages both by which cards they come to and which cards they come from."
     technical:
-      - "Messages are end-to-end encrypted to the card's ML-KEM public key. The outer envelope carries only the recipient card hash; sender identity, message type, and content sit inside the encrypted payload, routed through relays."
+      - "A cards public key can be used to derive an address that can send and receive messages. All messages are end-to-end encrypted to the card's ML-KEM public key. The outer envelope carries only the recipient card hash; sender identity, message type, and content sit inside the encrypted payload."
     caveat: "an inbox is unsolicited-message-proof. It means messages carry verified provenance, and reaching you requires holding a card, not knowing a personal identifier."
 
   - id: a7
@@ -93,7 +93,7 @@ items:
     plain:
       - "If someone uses a card to gain access and then behaves badly, the issuing community can be told — even if that person is anonymous to the people they harmed. The report carries proof, not a screenshot. Anonymity isn't impunity."
     technical:
-      - "A defined process lets reports include proof of the cardholder's actions, signed by their card. If issuers fail to act, third-party trust and safety services focused on defined harm categories can flag the card."
+      - "A defined process lets people report a cardholder's actions to that card's issuer. The report includes proof of the cardholder's actions, signed by their card. If issuers fail to act and the harm is severe, third-party trust and safety services focused on defined harm categories can flag the card."
     caveat: "the issuer learns who the person is. It means the issuer can act on the card they granted."
 
   - id: a8
@@ -104,8 +104,8 @@ items:
     plain:
       - "The services that make cards work are built so that no single one of them can see what cards you hold or what you do with them. The knowledge is deliberately split apart, so no operator, including us, holds enough to watch you."
     technical:
-      - "Stated per component: wallet services route by recipient hash only; presses verify before posting; relays implement OHTTP and see only device-notification metadata. Data linking cards and messages lives on wallet services; data linking messages and devices lives across independent relays — neither half is sufficient alone."
-    caveat: "nothing is observable. On-chain writes are public events with timestamps and a visible fee payer."
+      - "Card backups are encrypted and delivered and retrieved via OHTTP. A system of independent relays implement OHTTP and allow messages to be routed to devices without data about both a card and the device it is being sent to living in the same place."
+    caveat: "cards cannot be de-anonymized, they can be if message routers and relay services collude. To make this difficult, a user can choose to route their messages through a large number of relay services, making collusion very difficult."
 
   - id: a9
     index_label: "A9"
@@ -115,7 +115,7 @@ items:
     plain:
       - "The protocol is federated. Anyone trusted can run the infrastructure. No company sits in the middle, and no one can buy their way into that position. It's open source, and a community can move to another operator or run their own."
     technical:
-      - "Presses, relays, wallet services, and notaries are independently operated roles, authorized by cards rather than a central administrator. A governance board maintains the protocol and adjudicates rule violations; it does not own the infrastructure or the data."
+      - "Presses, relays, wallet services, and notaries are independently operated roles, authorized by cards rather than a central administrator. A governance board maintains the protocol and adjudicates rule violations if these operators act in bad faith; it does not own the infrastructure or the data."
     caveat: "there's no trust involved. Federation moves trust from a company to an operator, identified by card so you can see why they're deserving of trust."
 
   - id: a10
