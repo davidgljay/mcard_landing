@@ -148,7 +148,7 @@ description: A secure tool for building trust and exchanging resources in commun
       {% endfor %}
     </div>
 
-    <form class="involve-form" action="#" method="post">
+    <form class="involve-form" id="involve-form" action="#" method="post">
       <h3>{{ d.get_involved.form.heading }}</h3>
       <p class="involve-form__intro">{{ d.get_involved.form.intro }}</p>
 
@@ -159,7 +159,7 @@ description: A secure tool for building trust and exchanging resources in commun
         </div>
         <div class="field">
           <label for="involve-email">Email</label>
-          <input id="involve-email" name="email" type="email" autocomplete="email">
+          <input id="involve-email" name="email" type="email" autocomplete="email" required>
         </div>
       </div>
 
@@ -195,5 +195,9 @@ description: A secure tool for building trust and exchanging resources in commun
 
       <button type="submit" class="btn btn--accent">{{ d.get_involved.form.submit_label }}</button>
     </form>
+
+    <div class="involve-form__thanks" id="involve-thanks" hidden>
+      <p>Thanks for reaching out — we'll be in touch soon.</p>
+    </div>
   </div>
 </section>
