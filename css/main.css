@@ -559,18 +559,28 @@ textarea:focus-visible,
 .audience-card__tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
 .tag { border: 1px solid var(--green-500); color: var(--green-600); border-radius: 20px; padding: 5px 12px; font-size: 13px; }
 
-.involve-form {
+.involve-form,
+.involve-form__thanks {
   background: var(--tint);
   border-radius: 16px;
   padding: 28px 24px;
   max-width: 640px;
+}
+.involve-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-@media (min-width: 640px) { .involve-form { padding: 40px; } }
+.involve-form[hidden] { display: none; }
+@media (min-width: 640px) { .involve-form, .involve-form__thanks { padding: 40px; } }
 .involve-form h3 { font-size: 22px; }
 .involve-form__intro { font-size: 14px; color: var(--muted); }
+.involve-form__thanks p {
+  margin: 0;
+  text-align: center;
+  font: 700 18px var(--font-body);
+  color: var(--navy);
+}
 
 .field { display: flex; flex-direction: column; gap: 6px; }
 .field label { font: 600 13px var(--font-body); color: var(--navy); }
