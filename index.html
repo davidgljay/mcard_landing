@@ -154,7 +154,7 @@ description: A secure tool for building trust and exchanging resources in commun
 
       <div class="involve-form__row">
         <div class="field">
-          <label for="involve-name">Name</label>
+          <label for="involve-name">Name <span class="optional">optional</span></label>
           <input id="involve-name" name="name" type="text" autocomplete="name">
         </div>
         <div class="field">
@@ -164,7 +164,7 @@ description: A secure tool for building trust and exchanging resources in commun
       </div>
 
       <fieldset class="involve-form__roles">
-        <legend>{{ d.get_involved.form.role_question }} <span class="hint">{{ d.get_involved.form.role_hint }}</span></legend>
+        <legend>{{ d.get_involved.form.role_question }} <span class="hint">{{ d.get_involved.form.role_hint }}</span> <span class="optional">optional</span></legend>
         {% for role in d.get_involved.form.roles %}
         <label class="checkbox">
           <input type="checkbox" name="role" value="{{ role }}">
@@ -174,7 +174,7 @@ description: A secure tool for building trust and exchanging resources in commun
       </fieldset>
 
       <div class="field">
-        <label for="involve-org">Your community or organization</label>
+        <label for="involve-org">Your community or organization <span class="optional">optional</span></label>
         <input id="involve-org" name="organization" type="text">
       </div>
 
@@ -182,14 +182,14 @@ description: A secure tool for building trust and exchanging resources in commun
         <legend class="visually-hidden">How would you like to be involved?</legend>
         {% for interest in d.get_involved.form.interests %}
         <label class="checkbox">
-          <input type="checkbox" name="interest" value="{{ interest }}">
+          <input type="checkbox" name="interest" value="{{ interest }}" {% if forloop.first %}checked{% endif %}>
           {{ interest }}
         </label>
         {% endfor %}
       </fieldset>
 
       <div class="field">
-        <label for="involve-why">Why are you interested in learning more? (optional)</label>
+        <label for="involve-why">Why are you interested in learning more? <span class="optional">optional</span></label>
         <textarea id="involve-why" name="why" rows="3"></textarea>
       </div>
 

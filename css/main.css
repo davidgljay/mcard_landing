@@ -600,6 +600,7 @@ textarea:focus-visible,
 }
 .involve-form__roles legend { font: 600 13px var(--font-body); color: var(--navy); padding: 0; margin-bottom: 4px; }
 .involve-form__roles .hint { font-weight: 400; color: var(--muted); }
+.optional { font-style: italic; font-weight: 400; font-size: 11.5px; color: var(--muted); }
 .involve-form__roles .checkbox {
   display: flex;
   align-items: center;
