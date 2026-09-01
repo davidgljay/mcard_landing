@@ -47,13 +47,13 @@ qualifying_moment:
 pillar_1:
   heading: "Easily create shared resources anywhere on the internet"
   bullets:
-    - text: "Give every member a card. Anything your community makes can check it."
+    - text: "Give community members a card. Anything your community makes can check for it."
     - text: "No accounts, no passwords, no complex API integrations, no single sign on, no central membership database."
     - text: "Free to use and open source."
-    - text: "Anyone in the community can set something up, not just you. The community calendar doesn't have to be your job."
-      highlight: true
     - text: "Works across the internet, not inside one platform."
     - text: "Private and secure by default."
+    - text: "Anyone in the community can set up shared resources without relying on a central administrator."
+      highlight: true
   examples_heading: "With membership cards, you can have..."
   examples:
     - icon: /img/icon-calendar.png
@@ -123,7 +123,7 @@ supporting_messages:
         - "You can update cards to reflect a member's accomplishments, letting others know that they are deserving of trust."
     - heading: "Your community's card data will remain private and secure"
       bullets:
-        - "No single operator can see who holds a card or what they do with it."
+        - "No single operator can see who holds a card or what they choose to do with it."
         - "The data belongs to your community, not to us."
   closing_text: "Want to learn more? Read the"
   closing_link_label: "list of assurances that membership cards offer"
