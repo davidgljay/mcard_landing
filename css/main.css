@@ -557,7 +557,8 @@ textarea:focus-visible,
 .audience-card__body { font-size: 14.5px; color: var(--muted); }
 .audience-card__detail { font-size: 14.5px; color: var(--body-text); margin-top: 4px; }
 .audience-card__tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
-.tag { border: 1px solid var(--green-500); color: var(--green-600); border-radius: 20px; padding: 5px 12px; font-size: 13px; }
+.tag { border: 1px solid var(--green-500); color: var(--green-600); border-radius: 20px; padding: 5px 12px; font-size: 13px; text-decoration: none; display: inline-block; }
+a.tag:hover { text-decoration: underline; }
 
 .involve-form,
 .involve-form__thanks {

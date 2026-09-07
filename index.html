@@ -140,7 +140,11 @@ description: A secure tool for building trust and exchanging resources in commun
         {% if a.tags %}
         <div class="audience-card__tags">
           {% for tag in a.tags %}
+          {% if tag.url %}
+          <a class="tag" href="{{ tag.url }}" target="_blank" rel="noopener">{{ tag.text }}</a>
+          {% else %}
           <span class="tag">{{ tag }}</span>
+          {% endif %}
           {% endfor %}
         </div>
         {% endif %}

@@ -177,7 +177,8 @@ get_involved:
       body: "People who can review the protocol and check whether it lives up to its <a href=\"/assurances/\">assurances</a>."
       detail: ""
       tags:
-        - "Open question: ML-KEM-768 encapsulation"
+        - text: "Open question: how should we handle an update registry?"
+          url: "https://github.com/davidgljay/membership_card_protocol/issues/1"
     - heading: "People building community applications"
       body: "Developers, technologists, anyone who can put together a working thing with AI coding tools."
       detail: "Build the places communities reach with their cards — calendars, directories, boards, games."
