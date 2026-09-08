@@ -180,6 +180,13 @@ textarea:focus-visible,
   font-size: 20px;
   color: var(--navy);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.site-nav__logo {
+  height: 28px;
+  width: auto;
 }
 .site-nav__toggle {
   display: flex;
