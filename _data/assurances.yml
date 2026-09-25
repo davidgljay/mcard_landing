@@ -2,8 +2,6 @@ intro:
   eyebrow: "The Assurances"
   heading: "The Membership Card Protocol is built on these promises"
   body: "These are design guarantees: what the Membership Card Protocol is built to promise. We state them here so that they can be tested against the implementation and audited by people who know how to break things."
-  method_label: "Method — what this list is, and is not"
-  method_body: "What this list is: what the protocol is designed to guarantee and is being audited against. What it is not: a claim that each guarantee has been independently verified today. We've tried our best, and know that a more thorough review is needed."
 
 items:
   - id: a0
