@@ -1,0 +1,249 @@
+{
+  "voice": "Samantha",
+  "rate": "165",
+  "scenes": [
+    {
+      "id": "Scene1",
+      "audio": "vo/scene1.wav",
+      "leadIn": 0.4,
+      "voSeconds": 8.7,
+      "seconds": 9.9,
+      "captions": [
+        {
+          "text": "Think about a library card.",
+          "start": 0.4,
+          "end": 2.09
+        },
+        {
+          "text": "A union card.",
+          "start": 2.09,
+          "end": 2.9
+        },
+        {
+          "text": "Being a card-carrying member of any community you believe in.",
+          "start": 2.9,
+          "end": 6.72
+        },
+        {
+          "text": "A card says: this person belongs here.",
+          "start": 6.72,
+          "end": 9.1
+        }
+      ]
+    },
+    {
+      "id": "Scene2",
+      "audio": "vo/scene2.wav",
+      "leadIn": 0.4,
+      "voSeconds": 13.8,
+      "seconds": 15,
+      "captions": [
+        {
+          "text": "A membership card does the same thing online.",
+          "start": 0.4,
+          "end": 3.36
+        },
+        {
+          "text": "Desiree runs a salsa society.",
+          "start": 3.36,
+          "end": 5.26
+        },
+        {
+          "text": "She designs a card, shares a link,",
+          "start": 5.26,
+          "end": 7.5
+        },
+        {
+          "text": "and members add it to their phones with a tap.",
+          "start": 7.5,
+          "end": 10.52
+        },
+        {
+          "text": "No accounts.",
+          "start": 10.52,
+          "end": 11.31
+        },
+        {
+          "text": "No passwords.",
+          "start": 11.31,
+          "end": 12.16
+        },
+        {
+          "text": "No membership list to maintain.",
+          "start": 12.16,
+          "end": 14.2
+        }
+      ]
+    },
+    {
+      "id": "Scene3",
+      "audio": "vo/scene3.wav",
+      "leadIn": 0.4,
+      "voSeconds": 15.83,
+      "seconds": 17.03,
+      "captions": [
+        {
+          "text": "Now anyone in the community can set up an online service that checks for that card,",
+          "start": 0.4,
+          "end": 5.3
+        },
+        {
+          "text": "like a rideshare list, a calendar anyone can post to,",
+          "start": 5.3,
+          "end": 8.43
+        },
+        {
+          "text": "or a free-stuff board.",
+          "start": 8.43,
+          "end": 9.73
+        },
+        {
+          "text": "To get in, members just show their card.",
+          "start": 9.73,
+          "end": 12.09
+        },
+        {
+          "text": "And if the group likes to chat on WhatsApp, they can stay on WhatsApp.",
+          "start": 12.09,
+          "end": 16.23
+        }
+      ]
+    },
+    {
+      "id": "Scene4",
+      "audio": "vo/scene4.wav",
+      "leadIn": 0.4,
+      "voSeconds": 13.22,
+      "seconds": 14.42,
+      "captions": [
+        {
+          "text": "Cards also work to build trust.",
+          "start": 0.4,
+          "end": 2.17
+        },
+        {
+          "text": "When a member of the dance community has an injury,",
+          "start": 2.17,
+          "end": 5.07
+        },
+        {
+          "text": "someone replies and attaches a card proving that they're a licensed nurse.",
+          "start": 5.07,
+          "end": 9.29
+        },
+        {
+          "text": "Cards can be updated or revoked,",
+          "start": 9.29,
+          "end": 11.12
+        },
+        {
+          "text": "so a card shows someone is in good standing.",
+          "start": 11.12,
+          "end": 13.62
+        }
+      ]
+    },
+    {
+      "id": "Scene5",
+      "audio": "vo/scene5.wav",
+      "leadIn": 0.4,
+      "voSeconds": 12.37,
+      "seconds": 13.57,
+      "captions": [
+        {
+          "text": "Showing a card proves you are trusted by a community,",
+          "start": 0.4,
+          "end": 3.21
+        },
+        {
+          "text": "and nothing else.",
+          "start": 3.21,
+          "end": 4.12
+        },
+        {
+          "text": "And the cards you hold aren't connected to each other.",
+          "start": 4.12,
+          "end": 6.99
+        },
+        {
+          "text": "Your church choir card can't be linked to your LGBTQ youth",
+          "start": 6.99,
+          "end": 10.07
+        },
+        {
+          "text": "group card unless you choose to show them together.",
+          "start": 10.07,
+          "end": 12.77
+        }
+      ]
+    },
+    {
+      "id": "Scene6",
+      "audio": "vo/scene6.wav",
+      "leadIn": 0.4,
+      "voSeconds": 20.83,
+      "seconds": 22.03,
+      "captions": [
+        {
+          "text": "There's no large tech company controlling your",
+          "start": 0.4,
+          "end": 2.99
+        },
+        {
+          "text": "cards or spying on you when you use them.",
+          "start": 2.99,
+          "end": 5.3
+        },
+        {
+          "text": "Cards are run by a network of trusted operators that",
+          "start": 5.3,
+          "end": 8.22
+        },
+        {
+          "text": "anyone can join if they prove themselves.",
+          "start": 8.22,
+          "end": 10.53
+        },
+        {
+          "text": "No single operator can see who holds what cards or what they do with them,",
+          "start": 10.53,
+          "end": 14.7
+        },
+        {
+          "text": "and cards enable community data to be strongly encrypted by default.",
+          "start": 14.7,
+          "end": 18.53
+        },
+        {
+          "text": "The protocol is open source, and nobody owns it.",
+          "start": 18.53,
+          "end": 21.23
+        }
+      ]
+    },
+    {
+      "id": "Scene7",
+      "audio": "vo/scene7.wav",
+      "leadIn": 0.4,
+      "voSeconds": 8.37,
+      "seconds": 9.57,
+      "captions": [
+        {
+          "text": "The Membership Card Protocol is in development,",
+          "start": 0.4,
+          "end": 3.06
+        },
+        {
+          "text": "and we're looking to partner with communities who want to try it out.",
+          "start": 3.06,
+          "end": 6.96
+        },
+        {
+          "text": "Learn more at membershipcard.io.",
+          "start": 6.96,
+          "end": 8.77
+        }
+      ]
+    }
+  ]
+}
